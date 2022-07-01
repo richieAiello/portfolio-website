@@ -1,2 +1,127 @@
 // font-family: 'Ibarra Real Nova', serif;
 // font-family: 'Public Sans', sans-serif;
+/*********************************
+  VARIABLES
+*********************************/
+$Cyan: #5FB4A2;
+$Dark-blue: #203A4C;
+$Greyish-dark-blue: #33323D;
+$Grey: #EAEAEB;
+$Light-grey: #FAFAFA;
+$error: #F43030;
+
+/*********************************
+  RESET AND SCROLLBAR
+*********************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 400ms;
+}
+
+/*********************************
+  BASE STYLES
+*********************************/
+.body {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+}
+
+.container {
+  width: min(100% - 4rem, 689px);
+  margin-inline: auto;
+}
+
+.active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+/*********************************
+  NAV
+*********************************/
+/*********************************
+  MAIN
+*********************************/
+/*********************************
+  FOOTER
+*********************************/
+.footer {
+  background-color: $Greyish-dark-blue;
+  color: #FFF;
+  text-align: center;
+  padding: 3.5rem 0;
+
+  &__wrapper {
+    display: grid;
+    justify-items: center;
+
+    // &--icons {
+      
+    // }
+  }
+
+  .logo {
+    path {
+      fill: #FFF;
+    }
+  }
+
+  &__list {
+    margin: 2.5rem 0;
+    list-style: none;
+  }
+
+  &__item {
+    &:nth-of-type(2) {
+      margin: 2rem 0;
+    }
+  }
+
+  &__link {
+    font-size: 0.75rem;
+    line-height: 14.1px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      color: $Cyan;
+    } 
+
+    &--icon {
+      margin-right: 1rem;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover,
+      &:focus {
+        .footer__icon {
+          path {
+            fill: $Cyan;
+
+          }
+        }
+      }
+    }
+  }
+
+  &__icon {
+    vertical-align: middle;
+    
+    path {
+      transition: all 400ms;
+      fill: #FFF;
+    }
+  }
+}

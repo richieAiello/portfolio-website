@@ -9,7 +9,7 @@ export default function Footer(props) {
   return(
     <footer className="footer">
       <div className="footer__wrapper container">
-        <Logo />
+        <Logo className="logo" />
         <ul className="footer__list">
           <li className="footer__item">
             <NavLink to="/" className="footer__link link">
@@ -29,32 +29,36 @@ export default function Footer(props) {
         </ul>
         <div className="footer__wrapper--icons">
           <a 
-            href="https://github.com/richieAiello" 
+            href="https://github.com/richieAiello"
+            target="_blank"
             className="footer__link--icon link"
             aria-label="Visit my GitHub profile."  
           >
-            <GitHub />
+            <GitHub className="footer__icon" />
           </a>
           <a 
-            href="https://twitter.com/richieAiello" 
+            href="https://twitter.com/richieAiello"
+            target="_blank" 
             className="footer__link--icon link"
             aria-label="Contact me on Twitter."  
           >
-            <Twitter />
+            <Twitter className="footer__icon" />
           </a>
           <a 
-            href="https://twitter.com/richieAiello" 
+            href="#"
+            target="_blank"
             className="footer__link--icon link"
             aria-label="View my LinkedIn profile."  
           >
-            <LinkedIn />
+            <LinkedIn className="footer__icon" />
           </a>
           <a 
-            href="https://www.frontendmentor.io/profile/richieAiello" 
+            href="https://www.frontendmentor.io/profile/richieAiello"
+            target="_blank"
             className="footer__link--icon link"
             aria-label="Visit my Frontend Mentor profile."  
           >
-            <FrontendMentor />
+            <FrontendMentor className="footer__icon" />
           </a>
         </div>
       </div>

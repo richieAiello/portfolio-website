@@ -21,10 +21,22 @@ $error: #F43030;
   margin: 0;
 }
 
+.btn,
 .link {
-  text-decoration: none;
   color: inherit;
   transition: all 400ms;
+}
+
+.btn {
+  display: inline-block;
+  border: initial;
+  background-color: initial;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+.link {
+  text-decoration: none;
 }
 
 /*********************************
@@ -34,6 +46,7 @@ $error: #F43030;
   font-family: 'Public Sans', sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
+  color: $Greyish-dark-blue;
 }
 
 .container {
@@ -46,12 +59,74 @@ $error: #F43030;
   text-decoration-thickness: 2px;
 }
 
+.invisible {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+// For hiding hamburger and nav at certain screens
+// Try to conditioanlly render with React instead!!!
+.hidden {
+  display: none;
+}
+
 /*********************************
   NAV
 *********************************/
+.header {
+  background-color: #FFF;
+  padding: 2rem 0 2.5rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  background-color: $Greyish-dark-blue;
+  width: 20px;
+  height: 2px;
+  border-radius: 1rem;
+  transition: all 400ms;
+  position: absolute;
+  left: 0;
+
+  &--top {
+    top: 3px;
+  }
+
+  &--bottom {
+    bottom: 3px;
+  }
+}
+
+// Toggled on click for .hamburger--top
+.flip-top {
+  top: 7px;
+  transform: rotate(-225deg);
+}
+
+// Toggled on click for .hamburger--bottom
+.flip-bottom {
+  bottom: 7px;
+  transform: rotate(-315deg);
+}
 /*********************************
   MAIN
 *********************************/
+.hero {
+  margin-top: 6.5rem;
+}
 /*********************************
   FOOTER
 *********************************/
@@ -123,5 +198,22 @@ $error: #F43030;
       transition: all 400ms;
       fill: #FFF;
     }
+  }
+}
+/*********************************
+  BUTTONS
+*********************************/
+.btn {
+  &--hamburger {
+    height: 1rem;
+    width: 1.25rem;
+    position: relative;
+
+    // &:hover,
+    // &:focus {
+    //   .hamburger {
+    //     background-color: #6d8982;
+    //   }
+    // }
   }
 }

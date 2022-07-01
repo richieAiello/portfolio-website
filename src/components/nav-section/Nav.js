@@ -1,6 +1,7 @@
 import Logo from "jsx:../../assets/logo.svg";
-import NavMenu from "./NavMenu";
 import Hamburger from "./Hambuger";
+import NavMenu from "./NavMenu";
+import NavShadow from "./NavShadow";
 import clsx from "clsx";
 
 export default function Nav(props) {
@@ -21,7 +22,13 @@ export default function Nav(props) {
         <NavMenu 
           classes={clsx({
             "nav__menu": true,
-            "hidden": true
+            "hidden": false
+          })}
+        />
+        <NavShadow 
+          classes={clsx({
+            "nav__shadow": true,
+            "hidden": false
           })}
         />
       </nav>

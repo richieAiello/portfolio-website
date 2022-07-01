@@ -90,6 +90,51 @@ $error: #F43030;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &__menu,
+  &__shadow {
+    width: 100vw;
+    position: absolute;
+    top: 6.5rem;
+    left: 0;
+  }
+
+  &__menu {
+    background-color: $Greyish-dark-blue;
+    color: #FFF;
+    padding: 2.5rem 0;
+    z-index: 2;
+  }
+
+  &__shadow {
+    height: 100vh;
+    background-color: rgba(#000, 50%);
+    z-index: 1;
+  }
+
+  &__list {
+    list-style: none;
+    width: min(100% - 4rem, 689px);
+    margin-inline: auto;
+  }
+
+  &__item {
+    &:nth-of-type(2) {
+      margin: 2rem 0;
+    }
+  }
+
+  &__link {
+    font-size: 0.75rem;
+    line-height: 14.1px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      color: $Cyan;
+    } 
+  }
 }
 
 .hamburger {
@@ -204,6 +249,11 @@ $error: #F43030;
   BUTTONS
 *********************************/
 .btn {
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+
   &--hamburger {
     height: 1rem;
     width: 1.25rem;

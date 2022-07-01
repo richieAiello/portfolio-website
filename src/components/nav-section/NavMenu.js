@@ -8,9 +8,13 @@ export default function NavMenu(props) {
           <NavLink to="/" className="nav__link link">
             Home
           </NavLink>
+        </li>
+        <li className="nav__item">
           <NavLink to="/portfolio" className="nav__link link">
             Portfolio
           </NavLink>
+        </li>
+        <li className="nav__item">
           <NavLink to="/contact" className="nav__link link">
             Contact Me
           </NavLink>

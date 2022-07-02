@@ -1,5 +1,5 @@
 export default function NavShadow(props) {
   return (
-    <div className={props.classes}></div>
+    <div className={`nav__shadow ${props.classes}`}></div>
   );
 }

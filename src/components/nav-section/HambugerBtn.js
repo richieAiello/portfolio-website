@@ -1,4 +1,4 @@
-export default function Hamburger(props) {
+export default function HamburgerBtn(props) {
   return (
     <button
       type="button" 
@@ -7,8 +7,8 @@ export default function Hamburger(props) {
       disabled={props.disabled}
       onClick={props.onClick}
     >
-      <span className={props.classesTop} />
-      <span className={props.classesBottom} />
+      <span className={`hamburger hamburger--top ${props.classesTop}`} />
+      <span className={`hamburger hamburger--bottom ${props.classesBottom}`} />
     </button>
   );
 }

@@ -52,6 +52,10 @@ $error: #F43030;
 .container {
   width: min(100% - 4rem, 689px);
   margin-inline: auto;
+
+  @media(min-width: 1440px) {
+    width: 1110px;
+  }
 }
 
 .active {
@@ -269,6 +273,15 @@ $error: #F43030;
     //   }
     // }
   }
+}
+
+/*********************************
+  IMAGES
+*********************************/
+.image {
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
 }
 
 /**********************************

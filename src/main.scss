@@ -45,7 +45,8 @@ $error: #F43030;
 .body {
   font-family: 'Public Sans', sans-serif;
   font-weight: 400;
-  font-size: 0.9375rem;
+  font-size: 1rem;
+  line-height: 1.875rem;
   color: $Greyish-dark-blue;
 }
 
@@ -196,7 +197,7 @@ $error: #F43030;
 // hero section
 .hero {
   margin-top: 6.5rem;
-  margin-bottom: 6rem;
+  // margin-bottom: 6rem;
   min-height: calc(100vh - 6.5rem);
 
   &__context {
@@ -211,7 +212,35 @@ $error: #F43030;
 
 // about section
 .about {
+  margin-top: 6rem;
+  margin-bottom: 7.25rem;
 
+  &__context {
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: rgba($Greyish-dark-blue, 15%);
+    }
+
+    &::before {
+      margin-block: 2rem;
+    }
+
+    &::after {
+      margin-top: 3.125rem;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 1.75rem;
+  }
+
+  &__text {
+    margin-bottom: 1.5rem;
+  }
 }
 
 /*********************************
@@ -350,6 +379,18 @@ $error: #F43030;
           stroke: #fff;
         }
       }
+    }
+  }
+
+  &--white {
+    background-color: #fff;
+    border: 1px solid $Greyish-dark-blue;
+    padding: 1rem 2.25rem 1rem 2rem;
+
+    &:hover,
+    &:focus {
+      background-color: $Greyish-dark-blue;
+      color: #fff;
     }
   }
 }

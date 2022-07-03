@@ -13,8 +13,8 @@ export default function AboutContext(props) {
         I love being out in nature whether that’s going for a walk, run or cycling. I’d love 
         you to check out my work.
       </p>
-      <Link to="/portfolio" className="btn btn--portfolio link">
-        View My Portfolio
+      <Link to="/portfolio" className="btn btn--white link">
+        View Portfolio
       </Link>
     </div>
   );

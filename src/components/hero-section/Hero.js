@@ -6,7 +6,7 @@ export default function Hero(props) {
     <section className="hero container">
        <HeroImage />
        <HeroContext 
-        heading="I'm Richard Aiello! Welcome to my website."
+        heading="Welcome, I am Richard Aiello a front-end web developer"
        />
     </section>
   );

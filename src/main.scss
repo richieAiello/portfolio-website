@@ -32,7 +32,7 @@ $error: #F43030;
   border: initial;
   background-color: initial;
   font-family: inherit;
-  font-weight: 400;
+  font-weight: inherit;
 }
 
 .link {
@@ -71,6 +71,24 @@ $error: #F43030;
   margin: -1px;
   overflow: hidden;
   position: absolute;
+}
+
+.heading,
+.heading--secondary {
+  font-family: 'Ibarra Real Nova', serif;
+  line-height: 2.625rem;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: -0.36px;
+
+  &--secondary {
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: -0.29px;
+  }
 }
 
 // For hiding hamburger and nav at certain screens
@@ -176,6 +194,17 @@ $error: #F43030;
 *********************************/
 .hero {
   margin-top: 6.5rem;
+  margin-bottom: 6rem;
+  min-height: calc(100vh - 6.5rem);
+
+  &__context {
+    margin-top: 1.5rem;
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+    max-width: 320px;
+  }
 }
 
 /*********************************
@@ -256,6 +285,11 @@ $error: #F43030;
   BUTTONS
 *********************************/
 .btn {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  line-height: 14.1px;
+  letter-spacing: 2px;
+
   &:hover,
   &:focus {
     cursor: pointer;
@@ -273,6 +307,44 @@ $error: #F43030;
     //   }
     // }
   }
+
+  &--hero {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    width: min(100%, 12.5rem);
+    background-color: $Dark-blue;
+    color: #fff;
+
+    &__wrapper {
+      height: 100%;
+      width: 3rem;
+      background-color: rgba(#000, 10%);
+      padding-top: 1.125rem;
+    }
+
+    &__icon {
+      path {
+        transition: all 400ms;
+      }
+    }
+
+    &__text {
+      width: 100%;
+      text-align: center;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $Cyan;
+
+      .btn--hero__icon {
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+  }
 }
 
 /*********************************
@@ -282,6 +354,19 @@ $error: #F43030;
   max-width: 100%;
   object-fit: cover;
   vertical-align: middle;
+
+  &--hero {
+    min-height: 271px;
+    max-height: 350px;
+    width: 100%;
+    object-position: top 0 right -25px;
+  }
+
+  @media(min-width: 440px) {
+    &--hero {
+      object-position: top right;
+    }
+  }
 }
 
 /**********************************

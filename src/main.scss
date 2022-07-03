@@ -106,6 +106,7 @@ $error: #F43030;
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 3;
 }
 
 .nav {
@@ -372,6 +373,39 @@ $error: #F43030;
 /**********************************
   ANIMATIONS
 **********************************/
+@keyframes slide-up-hero {
+  0% {
+    opacity: 0%;
+    transform: translateY(100vh);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down-hero {
+  0% {
+    opacity: 0%;
+    transform: translateY(-100vh);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-hero {
+  0% {
+    opacity: 0%;
+    transform: translateX(-100vw);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
 @keyframes slide-in {
   0% {
     transform: translateX(-100vw);
@@ -407,6 +441,19 @@ $error: #F43030;
     opacity: 0%;
   }
 }
+
+.slide-up-hero {
+  animation: slide-up-hero 500ms 500ms backwards;
+}
+
+.slide-down-hero {
+  animation: slide-down-hero 1s forwards;
+}
+
+.slide-in-hero {
+  animation: slide-in-hero 500ms 1s backwards;
+}
+
 
 .slide-in {
   animation: slide-in 400ms forwards;

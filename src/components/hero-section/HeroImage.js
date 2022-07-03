@@ -7,7 +7,7 @@ export default function HeroImage(props) {
     <picture>
       <source srcSet={desktop} media="(min-width: 1440px)" />
       <source srcSet={tablet} media="(min-width: 480px)" />
-      <img src={mobile} alt="" className="image image--hero" />
+      <img src={mobile} alt="" className="image image--hero slide-in-hero" />
     </picture>
   );
 }

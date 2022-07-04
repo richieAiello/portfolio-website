@@ -32,7 +32,7 @@ $error: #F43030;
   border: initial;
   background-color: initial;
   font-family: inherit;
-  font-weight: 400;
+  font-weight: inherit;
 }
 
 .link {
@@ -45,13 +45,18 @@ $error: #F43030;
 .body {
   font-family: 'Public Sans', sans-serif;
   font-weight: 400;
-  font-size: 0.9375rem;
+  font-size: 1rem;
+  line-height: 1.875rem;
   color: $Greyish-dark-blue;
 }
 
 .container {
   width: min(100% - 4rem, 689px);
   margin-inline: auto;
+
+  @media(min-width: 1440px) {
+    width: 1110px;
+  }
 }
 
 .active {
@@ -69,6 +74,24 @@ $error: #F43030;
   position: absolute;
 }
 
+.heading,
+.heading--secondary {
+  font-family: 'Ibarra Real Nova', serif;
+  line-height: 2.625rem;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: -0.36px;
+
+  &--secondary {
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: -0.29px;
+  }
+}
+
 // For hiding hamburger and nav at certain screens
 // Try to conditioanlly render with React instead!!!
 .hidden {
@@ -84,6 +107,7 @@ $error: #F43030;
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 3;
 }
 
 .nav {
@@ -139,8 +163,8 @@ $error: #F43030;
 
 .hamburger {
   background-color: $Greyish-dark-blue;
-  width: 20px;
-  height: 2px;
+  width: 1.25rem;
+  height: 0.125rem;
   border-radius: 1rem;
   transition: all 400ms;
   position: absolute;
@@ -170,8 +194,66 @@ $error: #F43030;
 /*********************************
   MAIN
 *********************************/
+// hero section
 .hero {
   margin-top: 6.5rem;
+  // margin-bottom: 6rem;
+  min-height: calc(100vh - 6.5rem);
+
+  &__context {
+    margin-top: 1.5rem;
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+    max-width: 320px;
+  }
+}
+
+// about section
+.about {
+  margin-top: 6rem;
+  margin-bottom: 7.25rem;
+  scroll-margin-top: 6.5rem;
+
+  &__context {
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: rgba($Greyish-dark-blue, 15%);
+    }
+
+    &::before {
+      margin-block: 2rem;
+    }
+
+    &::after {
+      margin-top: 3.125rem;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 1.75rem;
+  }
+
+  &__text {
+    margin-bottom: 1.5rem;
+  }
+}
+
+// collaboration section
+.collaboration {
+  margin-bottom: 5rem;
+  text-align: center;
+
+  &__heading {
+    max-width: 350px;
+    margin-inline: auto;
+    margin-bottom: 2.5rem;
+  }
 }
 
 /*********************************
@@ -231,7 +313,6 @@ $error: #F43030;
         .footer__icon {
           path {
             fill: $Cyan;
-
           }
         }
       }
@@ -252,6 +333,11 @@ $error: #F43030;
   BUTTONS
 *********************************/
 .btn {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.125rem;
+
   &:hover,
   &:focus {
     cursor: pointer;
@@ -261,19 +347,131 @@ $error: #F43030;
     height: 1rem;
     width: 1.25rem;
     position: relative;
+  }
 
-    // &:hover,
-    // &:focus {
-    //   .hamburger {
-    //     background-color: #6d8982;
-    //   }
-    // }
+  &--hero {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    width: min(100%, 12.5rem);
+    background-color: #fff;
+    color: $Greyish-dark-blue;
+    border: 1px solid $Greyish-dark-blue;
+
+    &__wrapper {
+      height: 100%;
+      width: 3rem;
+      background-color: rgba($Greyish-dark-blue, 5%);
+      padding-top: 1.125rem;
+      transition: all 400ms;
+    }
+
+    &__icon {
+      path {
+        transition: all 400ms;
+      }
+    }
+
+    &__text {
+      width: 100%;
+      text-align: center;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $Greyish-dark-blue;
+      color: #fff;
+
+      .btn--hero__wrapper {
+        background-color: rgba(#fff, 10%);
+      }
+
+      .btn--hero__icon {
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+  }
+
+  &--white {
+    background-color: #fff;
+    border: 1px solid $Greyish-dark-blue;
+    padding: 1rem 2.25rem 1rem 2rem;
+
+    &:hover,
+    &:focus {
+      background-color: $Greyish-dark-blue;
+      color: #fff;
+    }
+  }
+}
+
+/*********************************
+  IMAGES
+*********************************/
+.image {
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+
+  &--hero {
+    min-height: 271px;
+    max-height: 350px;
+    width: 100%;
+    object-position: top 0 right -25px;
+  }
+
+  &--about {
+    height: 346px;
+    width: 100%;
+    object-position: 50% 85%;
+    object-fit: cover;
+  }
+
+  @media(min-width: 440px) {
+    &--hero {
+      object-position: top right;
+    }
   }
 }
 
 /**********************************
   ANIMATIONS
 **********************************/
+@keyframes slide-up-hero {
+  0% {
+    opacity: 0%;
+    transform: translateY(100vh);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down-hero {
+  0% {
+    opacity: 0%;
+    transform: translateY(-100vh);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-hero {
+  0% {
+    opacity: 0%;
+    transform: translateX(-100vw);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
 @keyframes slide-in {
   0% {
     transform: translateX(-100vw);
@@ -309,6 +507,19 @@ $error: #F43030;
     opacity: 0%;
   }
 }
+
+.slide-up-hero {
+  animation: slide-up-hero 500ms 500ms backwards;
+}
+
+.slide-down-hero {
+  animation: slide-down-hero 1s forwards;
+}
+
+.slide-in-hero {
+  animation: slide-in-hero 500ms 1s backwards;
+}
+
 
 .slide-in {
   animation: slide-in 400ms forwards;

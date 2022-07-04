@@ -5,7 +5,8 @@ export default function HeroBtn(props) {
     <button
       type="button"
       className="btn btn--hero link slide-up-hero"
-      aria-label="Scroll to about section."
+      // aria-label="Scroll to about section."
+      onClick={props.onClick}
     >
       <span className="btn--hero__wrapper">
         <Icon className="btn--hero__icon" />

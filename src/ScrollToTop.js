@@ -8,6 +8,11 @@ export default function ScrollToTop(props) {
     window.scrollTo(0, 0);
   }, [location]);
 
+  // on page refresh
+  window.onbeforeunload = () => {
+      window.scrollTo(0,0);
+  }
+
   return (
     <>
       {props.children}

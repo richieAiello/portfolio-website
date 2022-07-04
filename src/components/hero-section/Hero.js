@@ -1,5 +1,5 @@
 import HeroImage from "./HeroImage";
-import HeroContext from "./HeroContext";
+import HeroWrapper from "./HeroWrapper";
 import HeroHeading from "./HeroHeading";
 import HeroBtn from "./HeroBtn";
 
@@ -7,12 +7,12 @@ export default function Hero(props) {
   return (
     <section className="hero container">
       <HeroImage />
-      <HeroContext>
+      <HeroWrapper>
         <HeroHeading>
           Richard Aiello Front-End Web Developer
         </HeroHeading>
         <HeroBtn onClick={props.onClick} />
-      </HeroContext>
+      </HeroWrapper>
     </section>
   );
 }

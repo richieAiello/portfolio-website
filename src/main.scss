@@ -194,27 +194,8 @@ $error: #F43030;
 /*********************************
   MAIN
 *********************************/
-// hero section
-.hero {
+.main {
   margin-top: 6.5rem;
-  // margin-bottom: 6rem;
-  min-height: calc(100vh - 6.5rem);
-
-  &__context {
-    margin-top: 1.5rem;
-  }
-
-  &__heading {
-    margin-bottom: 2rem;
-    max-width: 320px;
-  }
-}
-
-// about section
-.about {
-  margin-top: 6rem;
-  margin-bottom: 7.25rem;
-  scroll-margin-top: 6.5rem;
 
   &__context {
     &::before,
@@ -225,6 +206,30 @@ $error: #F43030;
       width: 100%;
       background-color: rgba($Greyish-dark-blue, 15%);
     }
+  }
+}
+
+// hero section
+.hero {
+  margin-bottom: 6rem;
+  min-height: calc(100vh - 6.5rem);
+
+  &__wrapper {
+    padding-top: 1.5rem;
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+    max-width: 320px;
+  }
+}
+
+// about section
+.about {
+  margin-bottom: 7.25rem;
+  scroll-margin-top: 6.5rem;
+
+  &__context {
 
     &::before {
       margin-block: 2rem;
@@ -519,7 +524,6 @@ $error: #F43030;
 .slide-in-hero {
   animation: slide-in-hero 500ms 1s backwards;
 }
-
 
 .slide-in {
   animation: slide-in 400ms forwards;

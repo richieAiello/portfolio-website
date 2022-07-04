@@ -244,6 +244,18 @@ $error: #F43030;
   }
 }
 
+// collaboration section
+.collaboration {
+  margin-bottom: 5rem;
+  text-align: center;
+
+  &__heading {
+    max-width: 350px;
+    margin-inline: auto;
+    margin-bottom: 2.5rem;
+  }
+}
+
 /*********************************
   FOOTER
 *********************************/

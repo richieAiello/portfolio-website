@@ -1,5 +1,6 @@
 import Hero from "../components/hero-section/Hero";
 import About from "../components/about-section/About";
+import Collaboration from "../components/collaboration-section/Collaboration";
 import { useRef } from "react";
 
 export default function Home(props) {
@@ -15,6 +16,7 @@ export default function Home(props) {
     <main className="main main--home">
       <Hero onClick={handleAboutScroll}/>
       <About ref={aboutSectionRef}/>
+      <Collaboration />
     </main>
   );
 }

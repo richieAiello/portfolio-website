@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 import Nav from "./components/nav-section/Nav";
 import Home from "./routes/Home";
+import Portfolio from "./routes/Portfolio";
+import Contact from "./routes/Contact";
 import Footer from "./components/footer-section/Footer";
 
 export default function App() {
@@ -11,7 +13,11 @@ export default function App() {
       <BrowserRouter>
         <ScrollToTop>
           <Nav />
-          <Home />
+          <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/portfolio" element={<Portfolio />}/>
+            <Route path="/contact" element={<Contact />}/>
+          </Routes>
           <Footer />
         </ScrollToTop>
       </BrowserRouter>

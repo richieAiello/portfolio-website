@@ -1,6 +1,7 @@
 import Project from "../components/project-section/Project";
 import ProjectImage from "../components/project-section/ProjectImage";
-import Context from "../components/shared/Context"
+import Context from "../components/shared/Context";
+import Collaboration from "../components/collaboration-section/Collaboration";
 
 export default function Portfolio(props) {
   return (
@@ -72,6 +73,7 @@ export default function Portfolio(props) {
           linkText="Visit Website"
         />
       </Project>
+      <Collaboration />
     </main>
   );
 }

@@ -1,14 +1,14 @@
-// font-family: 'Ibarra Real Nova', serif;
-// font-family: 'Public Sans', sans-serif;
 /*********************************
   VARIABLES
 *********************************/
+$Font-Ibarra: 'Ibarra Real Nova', serif;
+$Font-PubSans: 'Public Sans', sans-serif;
 $Cyan: #5FB4A2;
 $Dark-blue: #203A4C;
 $Greyish-dark-blue: #33323D;
 $Grey: #EAEAEB;
 $Light-grey: #FAFAFA;
-$error: #F43030;
+$Error: #F43030;
 
 /*********************************
   RESET AND SCROLLBAR
@@ -43,7 +43,7 @@ $error: #F43030;
   BASE STYLES
 *********************************/
 .body {
-  font-family: 'Public Sans', sans-serif;
+  font-family: $Font-PubSans;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.875rem;
@@ -76,7 +76,7 @@ $error: #F43030;
 
 .heading,
 .heading--secondary {
-  font-family: 'Ibarra Real Nova', serif;
+  font-family: $Font-Ibarra;
   line-height: 2.625rem;
 }
 
@@ -92,8 +92,6 @@ $error: #F43030;
   }
 }
 
-// For hiding hamburger and nav at certain screens
-// Try to conditioanlly render with React instead!!!
 .hidden {
   display: none;
 }
@@ -259,6 +257,12 @@ $error: #F43030;
     margin-inline: auto;
     margin-bottom: 2.5rem;
   }
+}
+
+// section project
+.project {
+  display: grid;
+  justify-items: center;
 }
 
 /*********************************
@@ -434,9 +438,25 @@ $error: #F43030;
     object-fit: cover;
   }
 
+  &--project {
+    height: 288px;
+  }
+
   @media(min-width: 440px) {
     &--hero {
       object-position: top right;
+    }
+  }
+
+  @media(min-width: 768px) {
+    &--project {
+      height: 314px;
+    }
+  }
+
+  @media(min-width: 1440px) {
+    &--project {
+      height: 500px;
     }
   }
 }

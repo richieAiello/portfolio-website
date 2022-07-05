@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Logo from "jsx:../../assets/logo.svg";
+import Logo from "jsx:../../assets/icons/logo.svg";
 import HamburgerBtn from "./HambugerBtn";
 import NavMenu from "./NavMenu";
 import NavShadow from "./NavShadow";
@@ -20,7 +20,7 @@ export default function Nav(props) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setDisabled(false);
-  
+
       animateIn && setAnimateIn(false);
       animateOut && setAnimateOut(false);
 
@@ -35,15 +35,13 @@ export default function Nav(props) {
   If hidden was true, reveals the menu.
   Chooses whether to animate in or out based on
   the menuVisible state variable. */
-  const handleHamburgerClick = e => {
+  const handleHamburgerClick = (e) => {
     setDisabled(true);
     setMenuVisibile(!menuVisibile);
     hidden && setHidden(false);
-    
-    menuVisibile ?
-    setAnimateOut(true) :
-    setAnimateIn(true);
-  }
+
+    menuVisibile ? setAnimateOut(true) : setAnimateIn(true);
+  };
 
   return (
     <header className="header">
@@ -53,23 +51,23 @@ export default function Nav(props) {
         <HamburgerBtn
           disabled={disabled}
           onClick={handleHamburgerClick}
-          classesTop={clsx({"flip-top": menuVisibile})}
-          classesBottom={clsx({"flip-bottom": menuVisibile})}
+          classesTop={clsx({ "flip-top": menuVisibile })}
+          classesBottom={clsx({ "flip-bottom": menuVisibile })}
         />
         {/* Revealed with css on larger screens */}
-        <NavMenu 
+        <NavMenu
           classes={clsx({
-            "hidden": hidden,
+            hidden: hidden,
             "slide-in": animateIn,
-            "slide-out": animateOut
+            "slide-out": animateOut,
           })}
         />
         {/* Hidden with css on larger screens */}
-        <NavShadow 
-          classes={clsx({ 
-            "hidden": hidden,
+        <NavShadow
+          classes={clsx({
+            hidden: hidden,
             "fade-in": animateIn,
-            "fade-out": animateOut
+            "fade-out": animateOut,
           })}
         />
       </nav>

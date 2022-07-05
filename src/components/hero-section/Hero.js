@@ -8,9 +8,7 @@ export default function Hero(props) {
     <section className="hero container">
       <HeroImage />
       <HeroWrapper>
-        <HeroHeading>
-          Richard Aiello Front-End Web Developer
-        </HeroHeading>
+        <HeroHeading>Richard Aiello Front-End Web Developer</HeroHeading>
         <HeroBtn onClick={props.onClick} />
       </HeroWrapper>
     </section>

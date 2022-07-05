@@ -263,6 +263,29 @@ $Error: #F43030;
 .project {
   display: grid;
   justify-items: center;
+  margin-bottom: 4.5rem;
+
+  &:last-child {
+    margin-bottom: 5rem;
+  }
+
+  &__context,
+  &__context--secondary {
+    margin-top: 2rem;
+
+    &::before {
+      margin-bottom: 1.5rem;
+    }
+  
+    &::after {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__heading,
+  &__text {
+    margin-bottom: 1.5rem;
+  }
 }
 
 /*********************************

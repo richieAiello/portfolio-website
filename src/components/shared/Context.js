@@ -13,7 +13,7 @@ export default function Context({
   linkText,
 }) {
   return (
-    <section className={`main__context ${mod}__context${secondary && "--secondary"}`}>
+    <section className={`main__context ${mod}__context${secondary ? "--secondary" : ""}`}>
       <h2 className={`${mod}__heading heading`}>{heading}</h2>
       <p className={`${mod}__text`}>{text}</p>
       {process && <p className={`${mod}__text--secondary`}>{processText}</p>}

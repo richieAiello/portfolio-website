@@ -56,10 +56,10 @@ const data = [
     title: "creative",
     heading: "Creative Agency",
     src: {
-      // banner: require("../../assets/details/banner/creative.png"),
+      banner: require("../../assets/details/banner/creative.png"),
       preview: {
-        // tablet: require("../../assets/details/previews/creative-tablet.png"),
-        // mobile: require("../../assets/details/previews/creative-mobile.png"),
+        tablet: require("../../assets/details/previews/creative-tablet.png"),
+        mobile: require("../../assets/details/previews/creative-mobile.png"),
       },
     },
     url: "https://creative-agency-website-richieaiello.netlify.app/",

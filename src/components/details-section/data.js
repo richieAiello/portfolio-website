@@ -32,8 +32,8 @@ const data = [
     src: {
       banner: require("../../assets/details/banner/scoot.png"),
       preview: {
-        // tablet: require("../../assets/details/previews/scoot-tablet.png"),
-        // mobile: require("../../assets/details/previews/scoot-mobile.png"),
+        tablet: require("../../assets/details/previews/scoot-tablet.png"),
+        mobile: require("../../assets/details/previews/scoot-mobile.png"),
       },
     },
     url: "https://scoot-website-richaiello.netlify.app/",

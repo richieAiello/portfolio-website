@@ -8,6 +8,7 @@ import ProjectDetails from "./routes/ProjectDetails";
 import Designo from "./routes/nested-routes/Designo";
 import Photosnap from "./routes/nested-routes/Photosnap";
 import Scoot from "./routes/nested-routes/Scoot";
+import Dine from "./routes/nested-routes/Dine";
 import Contact from "./routes/Contact";
 import Footer from "./components/footer-section/Footer";
 
@@ -24,7 +25,7 @@ export default function App() {
               <Route path="designo" element={<Designo />} />
               <Route path="photosnap" element={<Photosnap />} />
               <Route path="scoot" element={<Scoot />} />
-              <Route path="dine" element={null} />
+              <Route path="dine" element={<Dine />} />
               <Route path="creative" element={null} />
             </Route>
             <Route path="contact" element={<Contact />} />

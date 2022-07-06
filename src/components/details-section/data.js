@@ -43,10 +43,10 @@ const data = [
     title: "dine",
     heading: "Dine Restaurant",
     src: {
-      // banner: require("../../assets/details/banner/dine.png"),
+      banner: require("../../assets/details/banner/dine.png"),
       preview: {
-        // tablet: require("../../assets/details/previews/dine-tablet.png"),
-        // mobile: require("../../assets/details/previews/dine-mobile.png"),
+        tablet: require("../../assets/details/previews/dine-tablet.png"),
+        mobile: require("../../assets/details/previews/dine-mobile.png"),
       },
     },
     url: "https://dine-restaurant-website-richieaiello.netlify.app/",

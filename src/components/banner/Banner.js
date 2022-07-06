@@ -5,7 +5,7 @@ export default function Banner({ title }) {
 
   data.filter((obj) => {
     let banner = obj.src.banner;
-    obj.title === title ? (image = banner) : "";
+    obj.title === title && (image = banner);
   });
 
   return <img src={image} alt="" className="image image--banner" />;

@@ -4,10 +4,10 @@ const data = [
     title: "designo",
     heading: "Designo",
     src: {
-      banner: "",
+      banner: require("../../assets/details/banner/designo.png"),
       preview: {
-        desktop: "",
-        mobile: "",
+        tablet: require("../../assets/details/previews/designo-tablet.png"),
+        mobile: require("../../assets/details/previews/designo-mobile.png"),
       },
     },
     url: "https://designo-website-richieaiello.netlify.app/",
@@ -17,10 +17,10 @@ const data = [
     title: "photosnap",
     heading: "Photosnap",
     src: {
-      banner: "",
+      banner: require("../../assets/details/banner/photosnap.png"),
       preview: {
-        desktop: "",
-        mobile: "",
+        // tablet: require("../../assets/details/previews/photosnap-tablet.png"),
+        // mobile: require("../../assets/details/previews/photosnap-mobile.png"),
       },
     },
     url: "https://photosnap-website-richieaiello.netlify.app/",
@@ -30,10 +30,10 @@ const data = [
     title: "scoot",
     heading: "Scoot",
     src: {
-      banner: "",
+      // banner: require("../../assets/details/banner/scoot.png"),
       preview: {
-        desktop: "",
-        mobile: "",
+        // tablet: require("../../assets/details/previews/scoot-tablet.png"),
+        // mobile: require("../../assets/details/previews/scoot-mobile.png"),
       },
     },
     url: "https://scoot-website-richaiello.netlify.app/",
@@ -43,10 +43,10 @@ const data = [
     title: "dine",
     heading: "Dine Restaurant",
     src: {
-      banner: "",
+      // banner: require("../../assets/details/banner/dine.png"),
       preview: {
-        desktop: "",
-        mobile: "",
+        // tablet: require("../../assets/details/previews/dine-tablet.png"),
+        // mobile: require("../../assets/details/previews/dine-mobile.png"),
       },
     },
     url: "https://dine-restaurant-website-richieaiello.netlify.app/",
@@ -56,10 +56,10 @@ const data = [
     title: "creative",
     heading: "Creative Agency",
     src: {
-      banner: "",
+      // banner: require("../../assets/details/banner/creative.png"),
       preview: {
-        desktop: "",
-        mobile: "",
+        // tablet: require("../../assets/details/previews/creative-tablet.png"),
+        // mobile: require("../../assets/details/previews/creative-mobile.png"),
       },
     },
     url: "https://creative-agency-website-richieaiello.netlify.app/",

@@ -7,15 +7,15 @@ export default function DetailsPreview({ title }) {
     obj.title === title && (currentObj = obj);
   });
 
-  const desktop = currentObj?.src.preview.desktop;
+  const tablet = currentObj?.src.preview.tablet;
   const mobile = currentObj?.src.preview.mobile;
   const heading = currentObj?.heading;
 
   return (
     <section className="preview">
-      <h3 className="preview__heading heading--secondary">Static Preview</h3>
+      <h3 className="preview__heading heading--secondary">Handheld Preview</h3>
       <img
-        src={desktop}
+        src={tablet}
         alt={`Static preview of the ${heading} website on dessktop.`}
         className="image image--preview"
       />

@@ -5,10 +5,12 @@ const data = [
     heading: "Designo",
     src: {
       banner: "",
-      previewTop: "",
-      previewBottom: "",
+      preview: {
+        desktop: "",
+        mobile: "",
+      },
     },
-    url: "",
+    url: "https://designo-website-richieaiello.netlify.app/",
   },
   {
     id: 2,
@@ -16,10 +18,12 @@ const data = [
     heading: "Photosnap",
     src: {
       banner: "",
-      previewTop: "",
-      previewBottom: "",
+      preview: {
+        desktop: "",
+        mobile: "",
+      },
     },
-    url: "",
+    url: "https://photosnap-website-richieaiello.netlify.app/",
   },
   {
     id: 3,
@@ -27,10 +31,12 @@ const data = [
     heading: "Scoot",
     src: {
       banner: "",
-      previewTop: "",
-      previewBottom: "",
+      preview: {
+        desktop: "",
+        mobile: "",
+      },
     },
-    url: "",
+    url: "https://scoot-website-richaiello.netlify.app/",
   },
   {
     id: 4,
@@ -38,10 +44,12 @@ const data = [
     heading: "Dine Restaurant",
     src: {
       banner: "",
-      previewTop: "",
-      previewBottom: "",
+      preview: {
+        desktop: "",
+        mobile: "",
+      },
     },
-    url: "",
+    url: "https://dine-restaurant-website-richieaiello.netlify.app/",
   },
   {
     id: 5,
@@ -49,10 +57,12 @@ const data = [
     heading: "Creative Agency",
     src: {
       banner: "",
-      previewTop: "",
-      previewBottom: "",
+      preview: {
+        desktop: "",
+        mobile: "",
+      },
     },
-    url: "",
+    url: "https://creative-agency-website-richieaiello.netlify.app/",
   },
 ];
 

@@ -1,4 +1,3 @@
-import data from "../../components/details-section/data";
 import Banner from "../../components/banner/Banner";
 import DetailsSection from "../../components/details-section/DetailsSection";
 import DetailsContext from "../../components/details-section/DetailsContext";
@@ -6,7 +5,6 @@ import DetailsBackground from "../../components/details-section/DetailsBackgroun
 import DetailsPreview from "../../components/details-section/DetailsPreview";
 
 export default function Designo(props) {
-  console.log(data);
 
   return (
     <>

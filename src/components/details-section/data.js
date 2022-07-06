@@ -19,8 +19,8 @@ const data = [
     src: {
       banner: require("../../assets/details/banner/photosnap.png"),
       preview: {
-        // tablet: require("../../assets/details/previews/photosnap-tablet.png"),
-        // mobile: require("../../assets/details/previews/photosnap-mobile.png"),
+        tablet: require("../../assets/details/previews/photosnap-tablet.png"),
+        mobile: require("../../assets/details/previews/photosnap-mobile.png"),
       },
     },
     url: "https://photosnap-website-richieaiello.netlify.app/",
@@ -30,7 +30,7 @@ const data = [
     title: "scoot",
     heading: "Scoot",
     src: {
-      // banner: require("../../assets/details/banner/scoot.png"),
+      banner: require("../../assets/details/banner/scoot.png"),
       preview: {
         // tablet: require("../../assets/details/previews/scoot-tablet.png"),
         // mobile: require("../../assets/details/previews/scoot-mobile.png"),

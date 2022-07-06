@@ -6,6 +6,7 @@ import Home from "./routes/Home";
 import Portfolio from "./routes/Portfolio";
 import ProjectDetails from "./routes/ProjectDetails";
 import Designo from "./routes/nested-routes/Designo";
+import Photosnap from "./routes/nested-routes/Photosnap";
 import Contact from "./routes/Contact";
 import Footer from "./components/footer-section/Footer";
 
@@ -20,7 +21,7 @@ export default function App() {
             <Route path="portfolio" element={<Portfolio />} />
             <Route path="details" element={<ProjectDetails />}>
               <Route path="designo" element={<Designo />} />
-              <Route path="photosnap" element={null} />
+              <Route path="photosnap" element={<Photosnap />} />
               <Route path="scoot" element={null} />
               <Route path="dine" element={null} />
               <Route path="creative" element={null} />

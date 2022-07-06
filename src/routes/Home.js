@@ -8,14 +8,14 @@ export default function Home(props) {
 
   const handleAboutScroll = () => {
     aboutSectionRef.current.scrollIntoView({
-      behavior: "smooth"
+      behavior: "smooth",
     });
-  }
-  
-  return(
+  };
+
+  return (
     <main className="main main--home">
-      <Hero onClick={handleAboutScroll}/>
-      <About ref={aboutSectionRef}/>
+      <Hero onClick={handleAboutScroll} />
+      <About ref={aboutSectionRef} />
       <Collaboration />
     </main>
   );

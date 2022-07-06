@@ -7,22 +7,22 @@ const imageData = [
   {
     id: 2,
     title: "photosnap",
-    src: ""
+    src: require('../../assets/portfolio/photosnap.png')
   },
   {
     id: 3,
     title: "scoot",
-    src: ""
+    src: require('../../assets/portfolio/scoot.png')
   },
   {
     id: 4,
     title: "dine",
-    src: ""
+    src: require('../../assets/portfolio/dine.png')
   },
   {
     id: 5,
-    title: "creative-agency",
-    src: ""
+    title: "creative",
+    src: require('../../assets/portfolio/creative.png')
   },
 ];
 

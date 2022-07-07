@@ -7,7 +7,7 @@ export default function Portfolio(props) {
   return (
     <main className="main main--portfolio container">
       <Project>
-        <ProjectImage title="designo"/>
+        <ProjectImage title="designo" />
         <Context
           mod="project"
           heading="Designo"
@@ -20,7 +20,7 @@ export default function Portfolio(props) {
         />
       </Project>
       <Project>
-        <ProjectImage title="photosnap"/>
+        <ProjectImage title="photosnap" />
         <Context
           mod="project"
           secondary={true}
@@ -34,7 +34,7 @@ export default function Portfolio(props) {
         />
       </Project>
       <Project>
-        <ProjectImage title="scoot"/>
+        <ProjectImage title="scoot" />
         <Context
           mod="project"
           heading="Scoot"
@@ -47,7 +47,7 @@ export default function Portfolio(props) {
         />
       </Project>
       <Project>
-        <ProjectImage title="dine"/>
+        <ProjectImage title="dine" />
         <Context
           mod="project"
           secondary={true}
@@ -61,7 +61,7 @@ export default function Portfolio(props) {
         />
       </Project>
       <Project>
-        <ProjectImage title="creative"/>
+        <ProjectImage title="creative" />
         <Context
           mod="project"
           heading="Creative Agency"

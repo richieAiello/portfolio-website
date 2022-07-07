@@ -39,6 +39,16 @@ $Error: #F43030;
   text-decoration: none;
 }
 
+// Additional styles for alice carousel package
+.alice-carousel {
+  display: flex;
+  flex-direction: column;
+
+  &__dots {
+    order: -1;
+  }
+}
+
 /*********************************
   BASE STYLES
 *********************************/
@@ -344,6 +354,20 @@ $Error: #F43030;
   }
 }
 
+// section carousel
+.carousel {
+  margin-bottom: 4rem;
+
+  &__heading {
+    text-align: center;
+  }
+
+   &__wrapper {
+    margin-top: 1.5rem;
+    display: grid;
+   }
+}
+
 /*********************************
   FOOTER
 *********************************/
@@ -494,9 +518,13 @@ $Error: #F43030;
     }
   }
 
-  &--details {
-
+  &--carousel {
+    margin-inline: auto;
   }
+
+  // &--details {
+
+  // }
 }
 
 /*********************************
@@ -533,6 +561,10 @@ $Error: #F43030;
     &:nth-of-type(1) {
       margin-bottom: 2rem;
     }
+  }
+
+  &--carousel {
+    margin-bottom: 2rem;
   }
 
   @media(min-width: 440px) {

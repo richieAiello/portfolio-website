@@ -289,6 +289,61 @@ $Error: #F43030;
   }
 }
 
+// section details
+.details {
+
+  &__context {
+    margin-bottom: 3rem;
+
+    &::before {
+      margin-bottom: 1.5rem;
+    }
+
+    &::after {
+      margin-top: 1.5rem;
+    }
+
+  }
+
+  &__heading {
+    margin-bottom: 1.5rem;
+  }
+
+  &__text {
+    margin-bottom: 1.5rem;
+
+    &--secondary {
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: $Cyan;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// section background
+.background {
+  margin-bottom: 2.5rem;
+
+  &__heading {
+    margin-bottom: 1.75rem;
+  }
+
+  // &__text {
+
+  // }
+
+}
+
+// section preview
+.preview {
+  margin-bottom: 4rem;
+
+  &__heading {
+    margin-bottom: 2.5rem;
+  }
+}
+
 /*********************************
   FOOTER
 *********************************/
@@ -438,6 +493,10 @@ $Error: #F43030;
       color: #fff;
     }
   }
+
+  &--details {
+
+  }
 }
 
 /*********************************
@@ -464,6 +523,16 @@ $Error: #F43030;
 
   &--project {
     height: 288px;
+  }
+
+  &--banner {
+    margin-bottom: 2.5rem;
+  }
+
+  &--preview {
+    &:nth-of-type(1) {
+      margin-bottom: 2rem;
+    }
   }
 
   @media(min-width: 440px) {

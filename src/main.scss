@@ -46,6 +46,14 @@ $Error: #F43030;
 
   &__dots {
     order: -1;
+
+    &-item:not(.__custom) {
+  
+      &:hover,
+      &.__active {
+        background-color: $Greyish-dark-blue !important;
+      }
+    }
   }
 }
 

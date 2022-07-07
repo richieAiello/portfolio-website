@@ -7,9 +7,9 @@ export default function DetailsPreview({ title }) {
     obj.title === title && (currentObj = obj);
   });
 
-  const tablet = currentObj?.src.preview.tablet;
-  const mobile = currentObj?.src.preview.mobile;
-  const heading = currentObj?.heading;
+  const tablet = currentObj.src.preview.tablet;
+  const mobile = currentObj.src.preview.mobile;
+  const heading = currentObj.heading;
 
   return (
     <section className="preview">

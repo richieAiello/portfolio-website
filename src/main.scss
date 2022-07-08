@@ -390,9 +390,17 @@ $Error: #f43030;
     margin-bottom: 1.5rem;
   }
 
-  &__email {
-    margin-top: 1.5rem;
+  &__address {
+    font-size: 0.9375rem;
     font-style: normal;
+
+    &:first-of-type {
+      margin-top: 1.5rem;
+    }
+
+    &:last-of-type {
+      margin-block: 1rem;
+    }
   }
 
   &__discord {

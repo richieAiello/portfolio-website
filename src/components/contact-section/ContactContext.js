@@ -13,11 +13,11 @@ const ContactContext = props => {
       path="mailto: richard.a.aiello@gmail.com"
       linkText="Email Me"
     >
-      <address className="contact__email">
+      <address className="contact__address">
         <img src={email} alt="" className="image" /> :
         richard.a.aiello@gmail.com
       </address>
-      <address className="contact__discord">
+      <address className="contact__address">
         <img src={discord} alt="" className="image" /> :
         richieAiello#3097
       </address>

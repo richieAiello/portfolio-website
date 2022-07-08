@@ -1,6 +1,7 @@
 import Context from '../shared/Context';
 import IconLink from '../shared/IconLink';
 import email from '../../assets/icons/email.svg';
+import discord from '../../assets/icons/discord.svg';
 
 const ContactContext = props => {
   return (
@@ -15,6 +16,10 @@ const ContactContext = props => {
       <address className="contact__email">
         <img src={email} alt="" className="image" /> :
         richard.a.aiello@gmail.com
+      </address>
+      <address className="contact__discord">
+        <img src={discord} alt="" className="image" /> :
+        richieAiello#3097
       </address>
       <div className="contact__icons">
         <IconLink mod="contact" name="github" />

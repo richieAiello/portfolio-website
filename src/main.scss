@@ -371,6 +371,56 @@ $Error: #f43030;
   }
 }
 
+// section contact
+.contact {
+  &__context {
+    margin-bottom: 4rem;
+
+    &::before {
+      margin-bottom: 2rem;
+    }
+
+    &::after {
+      margin-top: 2rem;
+    }
+  }
+
+  &__heading,
+  &__text {
+    margin-bottom: 1.5rem;
+  }
+
+  &__email {
+    margin-top: 1.5rem;
+    font-style: normal;
+  }
+
+  &__discord {
+    margin-block: 1rem;
+  }
+
+  &__link--icon {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    .icon {
+      path {
+        transition: all 400ms;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      .icon {
+        path {
+          fill: $Cyan;
+        }
+      }
+    }
+  }
+}
+
 /*********************************
   FOOTER
 *********************************/

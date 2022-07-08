@@ -1,6 +1,6 @@
-import Context from "../shared/Context";
-import image from "../../assets/homepage/desktop/profile-photo.jpeg";
-import { forwardRef } from "react";
+import Context from '../shared/Context';
+import image from '../../assets/homepage/desktop/profile-photo.jpeg';
+import { forwardRef } from 'react';
 
 const About = forwardRef((props, ref) => {
   return (

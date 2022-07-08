@@ -1,4 +1,4 @@
-import linkData from "./linkData";
+import linkData from './linkData';
 
 const IconLink = ({ mod, name }) => {
   let icon;
@@ -15,6 +15,6 @@ const IconLink = ({ mod, name }) => {
       {icon.svg}
     </a>
   );
-}
+};
 
 export default IconLink;

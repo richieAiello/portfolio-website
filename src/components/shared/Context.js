@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export default function Context({
   mod,
@@ -11,16 +11,19 @@ export default function Context({
   link,
   path,
   linkText,
+  children,
 }) {
   return (
     <section
       className={`main__context ${mod}__context${
-        secondary ? "--secondary" : ""
+        secondary ? '--secondary' : ''
       }`}
     >
       <h2 className={`${mod}__heading heading`}>{heading}</h2>
       <p className={`${mod}__text`}>{text}</p>
-      {process && <p className={`${mod}__text--secondary`}>{processText}</p>}
+      {process && (
+        <p className={`${mod}__text--secondary`}>{processText}</p>
+      )}
       {route && (
         <Link to={path} className={`btn btn--${mod} btn--white link`}>
           {linkText}
@@ -35,6 +38,7 @@ export default function Context({
           {linkText}
         </a>
       )}
+      {children}
     </section>
   );
 }

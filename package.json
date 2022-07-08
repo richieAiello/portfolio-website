@@ -5,8 +5,7 @@
   "source": "./src/index.html",
   "scripts": {
     "dev": "parcel",
-    "build": "parcel build",
-    "format": "prettier --write \"src/**/*.{js,jsx}\""
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
@@ -24,7 +23,6 @@
     "@parcel/transformer-svg-react": "^2.6.2",
     "clsx": "^1.1.1",
     "parcel": "^2.6.2",
-    "prettier": "^2.7.1",
     "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

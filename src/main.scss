@@ -46,6 +46,14 @@ $Error: #F43030;
 
   &__dots {
     order: -1;
+
+    &-item:not(.__custom) {
+  
+      &:hover,
+      &.__active {
+        background-color: $Greyish-dark-blue !important;
+      }
+    }
   }
 }
 
@@ -422,7 +430,7 @@ $Error: #F43030;
 
       &:hover,
       &:focus {
-        .footer__icon {
+        .icon {
           path {
             fill: $Cyan;
           }
@@ -431,7 +439,7 @@ $Error: #F43030;
     }
   }
 
-  &__icon {
+  .icon {
     vertical-align: middle;
     
     path {

@@ -3,12 +3,12 @@
 *********************************/
 $Font-Ibarra: 'Ibarra Real Nova', serif;
 $Font-PubSans: 'Public Sans', sans-serif;
-$Cyan: #5FB4A2;
-$Dark-blue: #203A4C;
-$Greyish-dark-blue: #33323D;
-$Grey: #EAEAEB;
-$Light-grey: #FAFAFA;
-$Error: #F43030;
+$Cyan: #5fb4a2;
+$Dark-blue: #203a4c;
+$Greyish-dark-blue: #33323d;
+$Grey: #eaeaeb;
+$Light-grey: #fafafa;
+$Error: #f43030;
 
 /*********************************
   RESET AND SCROLLBAR
@@ -48,7 +48,6 @@ $Error: #F43030;
     order: -1;
 
     &-item:not(.__custom) {
-  
       &:hover,
       &.__active {
         background-color: $Greyish-dark-blue !important;
@@ -72,7 +71,7 @@ $Error: #F43030;
   width: min(100% - 4rem, 689px);
   margin-inline: auto;
 
-  @media(min-width: 1440px) {
+  @media (min-width: 1440px) {
     width: 1110px;
   }
 }
@@ -118,7 +117,7 @@ $Error: #F43030;
   NAV
 *********************************/
 .header {
-  background-color: #FFF;
+  background-color: #fff;
   padding: 2rem 0 2.5rem;
   width: 100%;
   position: fixed;
@@ -141,7 +140,7 @@ $Error: #F43030;
 
   &__menu {
     background-color: $Greyish-dark-blue;
-    color: #FFF;
+    color: #fff;
     padding: 2.5rem 0;
     z-index: 2;
   }
@@ -173,7 +172,7 @@ $Error: #F43030;
     &:hover,
     &:focus {
       color: $Cyan;
-    } 
+    }
   }
 }
 
@@ -216,7 +215,7 @@ $Error: #F43030;
   &__context {
     &::before,
     &::after {
-      content: "";
+      content: '';
       display: block;
       height: 1px;
       width: 100%;
@@ -246,7 +245,6 @@ $Error: #F43030;
   scroll-margin-top: 6.5rem;
 
   &__context {
-
     &::before {
       margin-block: 2rem;
     }
@@ -295,7 +293,7 @@ $Error: #F43030;
     &::before {
       margin-bottom: 1.5rem;
     }
-  
+
     &::after {
       margin-top: 1.5rem;
     }
@@ -309,7 +307,6 @@ $Error: #F43030;
 
 // section details
 .details {
-
   &__context {
     margin-bottom: 3rem;
 
@@ -320,7 +317,6 @@ $Error: #F43030;
     &::after {
       margin-top: 1.5rem;
     }
-
   }
 
   &__heading {
@@ -350,7 +346,6 @@ $Error: #F43030;
   // &__text {
 
   // }
-
 }
 
 // section preview
@@ -370,10 +365,64 @@ $Error: #F43030;
     text-align: center;
   }
 
-   &__wrapper {
+  &__wrapper {
     margin-top: 1.5rem;
     display: grid;
-   }
+  }
+}
+
+// section contact
+.contact {
+  &__context {
+    margin-bottom: 4rem;
+
+    &::before {
+      margin-bottom: 2rem;
+    }
+
+    &::after {
+      margin-top: 2rem;
+    }
+  }
+
+  &__heading,
+  &__text {
+    margin-bottom: 1.5rem;
+  }
+
+  &__address {
+    font-size: 0.9375rem;
+    font-style: normal;
+
+    &:first-of-type {
+      margin-top: 1.5rem;
+    }
+
+    &:last-of-type {
+      margin-block: 1rem;
+    }
+  }
+
+  &__link--icon {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    .icon {
+      path {
+        transition: all 400ms;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      .icon {
+        path {
+          fill: $Cyan;
+        }
+      }
+    }
+  }
 }
 
 /*********************************
@@ -381,22 +430,18 @@ $Error: #F43030;
 *********************************/
 .footer {
   background-color: $Greyish-dark-blue;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   padding: 3.5rem 0;
 
   &__wrapper {
     display: grid;
     justify-items: center;
-
-    // &--icons {
-      
-    // }
   }
 
   .logo {
     path {
-      fill: #FFF;
+      fill: #fff;
     }
   }
 
@@ -420,7 +465,7 @@ $Error: #F43030;
     &:hover,
     &:focus {
       color: $Cyan;
-    } 
+    }
 
     &--icon {
       margin-right: 1rem;
@@ -430,7 +475,7 @@ $Error: #F43030;
 
       &:hover,
       &:focus {
-        .footer__icon {
+        .icon {
           path {
             fill: $Cyan;
           }
@@ -439,12 +484,12 @@ $Error: #F43030;
     }
   }
 
-  &__icon {
+  .icon {
     vertical-align: middle;
-    
+
     path {
       transition: all 400ms;
-      fill: #FFF;
+      fill: #fff;
     }
   }
 }
@@ -529,10 +574,6 @@ $Error: #F43030;
   &--carousel {
     margin-inline: auto;
   }
-
-  // &--details {
-
-  // }
 }
 
 /*********************************
@@ -575,19 +616,19 @@ $Error: #F43030;
     margin-bottom: 2rem;
   }
 
-  @media(min-width: 440px) {
+  @media (min-width: 440px) {
     &--hero {
       object-position: top right;
     }
   }
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     &--project {
       height: 314px;
     }
   }
 
-  @media(min-width: 1440px) {
+  @media (min-width: 1440px) {
     &--project {
       height: 500px;
     }

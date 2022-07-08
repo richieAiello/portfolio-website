@@ -1,9 +1,9 @@
-import Banner from "../../components/banner/Banner";
-import DetailsSection from "../../components/details-section/DetailsSection";
-import DetailsContext from "../../components/details-section/DetailsContext";
-import DetailsBackground from "../../components/details-section/DetailsBackground";
-import DetailsPreview from "../../components/details-section/DetailsPreview";
-import Carousel from "../../components/carousel-section/Carousel";
+import Banner from '../../components/banner/Banner';
+import DetailsSection from '../../components/details-section/DetailsSection';
+import DetailsContext from '../../components/details-section/DetailsContext';
+import DetailsBackground from '../../components/details-section/DetailsBackground';
+import DetailsPreview from '../../components/details-section/DetailsPreview';
+import Carousel from '../../components/carousel-section/Carousel';
 
 export default function Dine(props) {
   return (

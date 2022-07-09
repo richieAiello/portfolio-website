@@ -13,6 +13,12 @@ const ContactContext = props => {
       path="mailto: richard.a.aiello@gmail.com"
       linkText="Email Me"
     >
+      <div className="contact__icons">
+        <IconLink mod="contact" name="github" />
+        <IconLink mod="contact" name="twitter" />
+        <IconLink mod="contact" name="linkedin" />
+        <IconLink mod="contact" name="frontendmentor" />
+      </div>
       <address className="contact__address">
         <img src={email} alt="" className="image" /> :
         richard.a.aiello@gmail.com
@@ -21,12 +27,6 @@ const ContactContext = props => {
         <img src={discord} alt="" className="image" /> :
         richieAiello#3097
       </address>
-      <div className="contact__icons">
-        <IconLink mod="contact" name="github" />
-        <IconLink mod="contact" name="twitter" />
-        <IconLink mod="contact" name="linkedin" />
-        <IconLink mod="contact" name="frontendmentor" />
-      </div>
     </Context>
   );
 };

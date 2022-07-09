@@ -1,4 +1,4 @@
-const data = [
+const dataCarousel = [
   {
     id: 1,
     title: 'designo',
@@ -31,4 +31,4 @@ const data = [
   },
 ];
 
-export default data;
+export default dataCarousel;

@@ -366,8 +366,10 @@ $Error: #f43030;
   }
 
   &__wrapper {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     display: grid;
+    justify-items: center;
+    outline: none;
   }
 }
 
@@ -393,14 +395,11 @@ $Error: #f43030;
   &__address {
     font-size: 0.9375rem;
     font-style: normal;
+    margin-top: 1rem;
+  }
 
-    &:first-of-type {
-      margin-top: 1.5rem;
-    }
-
-    &:last-of-type {
-      margin-block: 1rem;
-    }
+  &__icons {
+    margin-top: 1.5rem;
   }
 
   &__link--icon {
@@ -569,10 +568,6 @@ $Error: #f43030;
       background-color: $Greyish-dark-blue;
       color: #fff;
     }
-  }
-
-  &--carousel {
-    margin-inline: auto;
   }
 }
 

@@ -31,7 +31,7 @@ class CarouselAlice extends Component {
       <AliceCarousel
         // ref={this.props.ref}
         items={this.props.items}
-        // touchTracking={false}
+        touchTracking={false}
         keyboardNavigation
         disableButtonsControls
         infinite

@@ -46,8 +46,16 @@ $Error: #f43030;
 
   &__dots {
     order: -1;
+    margin: 1.5rem 0 !important;
 
     &-item:not(.__custom) {
+      width: 1rem !important;
+      height: 1rem !important;
+
+      &:not(:last-child) {
+        margin-right: 1.5rem !important;
+      }
+
       &:hover,
       &.__active {
         background-color: $Greyish-dark-blue !important;
@@ -359,18 +367,10 @@ $Error: #f43030;
 
 // section carousel
 .carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 4rem;
-
-  &__heading {
-    text-align: center;
-  }
-
-  &__wrapper {
-    margin-top: 1rem;
-    display: grid;
-    justify-items: center;
-    outline: none;
-  }
 }
 
 // section contact

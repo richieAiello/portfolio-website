@@ -1,13 +1,11 @@
-import Context from "../shared/Context";
-import data from "./data";
+import Context from '../shared/Context';
+import data from './data';
 
 export default function DetailsContext({ title, text, processText }) {
-  console.log(data);
-
   let currentObj = {};
 
-  data.filter((obj) => {
-    obj.title === title ? (currentObj = obj) : {};
+  data.filter(obj => {
+    obj.title === title && (currentObj = obj);
   });
 
   return (

@@ -1,39 +1,52 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useLayoutEffect } from 'react';
 import dataCarousel from './dataCarousel';
 import CarouselAlice from './CarouselAlice';
 
 export default function Carousel(props) {
+  const [items, setItems] = useState([]);
   const [path, setPath] = useState('');
 
   const handleDragStart = e => e.preventDefault();
 
-  const items = [];
+  useLayoutEffect(() => {
+    const newItems = [];
 
-  dataCarousel.map(item => {
-    if (item.title !== props.title) {
-      items.push(
-        <img
-          title={item.path}
-          src={item.src}
-          alt=""
-          className="image image--carousel"
-          onDragStart={handleDragStart}
-          role="presentation"
-        />
-      );
-    }
-  });
+    dataCarousel.map(item => {
+      if (item.title !== props.title) {
+        newItems.push(
+          <img
+            title={item.path}
+            src={item.src}
+            alt=""
+            className="image image--carousel"
+            onDragStart={handleDragStart}
+            role="presentation"
+          />
+        );
+      }
+    });
+
+    setItems([...newItems]);
+  }, []);
 
   useEffect(() => {
-    const imagePath =
-      document.querySelector('.__active .image').title ?? '';
-    setPath(imagePath);
-  }, []);
+    setPath(items[0]?.props.title ?? '');
+
+    const dots = document.querySelectorAll(
+      '.alice-carousel__dots-item'
+    );
+    dots.forEach(dot => {
+      dot.setAttribute('tabindex', 0);
+      dot.addEventListener('keydown', e => {
+        e.code === 'Enter' && e.currentTarget.click();
+      });
+    });
+  }, [items]);
 
   const handleSlideChanged = () => {
     const imagePath =
-      document.querySelector('.__active .image').title ?? '';
+      document.querySelector('.__active .image')?.title ?? '';
     setPath(imagePath);
   };
 

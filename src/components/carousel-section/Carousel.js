@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import dataCarousel from './dataCarousel';
 import CarouselAlice from './CarouselAlice';
 
 export default function Carousel(props) {
   const [path, setPath] = useState('');
-  // const aliceRef = useRef();
 
   const handleDragStart = e => e.preventDefault();
 
@@ -38,9 +37,12 @@ export default function Carousel(props) {
     setPath(imagePath);
   };
 
-  // const handleLinkHover = e => {
-  //   console.log(aliceRef.current);
-  // };
+  const handleLinkHover = e => {
+    const activeDot = document.querySelector(
+      '.alice-carousel__dots-item.__active'
+    );
+    activeDot.click();
+  };
 
   return (
     <section className="carousel">
@@ -48,14 +50,13 @@ export default function Carousel(props) {
         Browse My Portfolio
       </h3>
       <CarouselAlice
-        // ref={aliceRef}
         items={items}
         onSlideChanged={handleSlideChanged}
       />
       <Link
         to={path}
         className="btn btn--white btn--carousel link"
-        // onMouseEnter={handleLinkHover}
+        onMouseEnter={handleLinkHover}
       >
         View Project
       </Link>

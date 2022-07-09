@@ -16,9 +16,6 @@ class CarouselAlice extends Component {
       dot.addEventListener('keydown', e => {
         e.code === 'Enter' && dot.click();
       });
-      dot.addEventListener('mouseover', e => {
-        console.log('hovering dot');
-      });
     });
   }
 
@@ -29,14 +26,13 @@ class CarouselAlice extends Component {
   render() {
     return (
       <AliceCarousel
-        // ref={this.props.ref}
         items={this.props.items}
         touchTracking={false}
         keyboardNavigation
         disableButtonsControls
         infinite
         autoPlay
-        autoPlayInterval={2000}
+        autoPlayInterval={1200}
         autoPlayStrategy="all"
         animationType="fadeout"
         onSlideChanged={this.props.onSlideChanged}

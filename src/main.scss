@@ -21,24 +21,6 @@ $Error: #f43030;
   margin: 0;
 }
 
-.btn,
-.link {
-  color: inherit;
-  transition: all 400ms;
-}
-
-.btn {
-  display: inline-block;
-  border: initial;
-  background-color: initial;
-  font-family: inherit;
-  font-weight: inherit;
-}
-
-.link {
-  text-decoration: none;
-}
-
 // Additional styles for alice carousel package
 .alice-carousel {
   display: flex;
@@ -51,6 +33,7 @@ $Error: #f43030;
     &-item:not(.__custom) {
       width: 1rem !important;
       height: 1rem !important;
+      border-radius: 10px !important;
 
       &:not(:last-child) {
         margin-right: 1.5rem !important;
@@ -82,6 +65,24 @@ $Error: #f43030;
   @media (min-width: 1440px) {
     width: 1110px;
   }
+}
+
+.btn,
+.link {
+  color: inherit;
+  transition: all 400ms;
+}
+
+.btn {
+  display: inline-block;
+  border: initial;
+  background-color: initial;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.link {
+  text-decoration: none;
 }
 
 .active {
@@ -125,8 +126,9 @@ $Error: #f43030;
   NAV
 *********************************/
 .header {
+  display: flex;
   background-color: #fff;
-  padding: 2rem 0 2.5rem;
+  height: 104px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -180,6 +182,52 @@ $Error: #f43030;
     &:hover,
     &:focus {
       color: $Cyan;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    position: unset;
+  }
+
+  .nav {
+    &__menu {
+      width: initial;
+      display: block;
+      position: unset;
+      background-color: initial;
+      color: $Greyish-dark-blue;
+      padding: 0;
+    }
+
+    &__shadow {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      width: initial;
+      margin-inline: unset;
+    }
+
+    &__item {
+      &:nth-of-type(2) {
+        margin: 0;
+      }
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+
+    &__link {
+      font-size: 0.875rem;
+
+      &:hover,
+      &:focus {
+        color: $Cyan;
+      }
     }
   }
 }
@@ -571,6 +619,12 @@ $Error: #f43030;
     &:focus {
       background-color: $Greyish-dark-blue;
       color: #fff;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &--hamburger {
+      display: none;
     }
   }
 }

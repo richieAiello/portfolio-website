@@ -62,6 +62,10 @@ $Error: #f43030;
   width: min(100% - 4rem, 689px);
   margin-inline: auto;
 
+  @media (min-width: 768px) {
+    width: 689px;
+  }
+
   @media (min-width: 1440px) {
     width: 1110px;
   }
@@ -370,6 +374,28 @@ $Error: #f43030;
     margin-inline: auto;
     margin-bottom: 2.5rem;
   }
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+    text-align: left;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 113px;
+      background-color: rgba($Greyish-dark-blue, 15%);
+      order: 2;
+    }
+
+    &__heading {
+      margin-inline: unset;
+      margin-bottom: 0;
+    }
+  }
 }
 
 // section project
@@ -674,6 +700,10 @@ $Error: #f43030;
 
     &--about {
       margin-bottom: 3rem;
+    }
+
+    &--collaboration {
+      order: 3;
     }
   }
 }

@@ -278,20 +278,40 @@ $Error: #f43030;
       background-color: rgba($Greyish-dark-blue, 15%);
     }
   }
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
 }
 
 // hero section
 .hero {
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   min-height: calc(100vh - 6.5rem);
 
   &__wrapper {
     padding-top: 1.5rem;
+    max-width: 275px;
+    background-color: #fff;
   }
 
   &__heading {
     margin-bottom: 2rem;
-    max-width: 320px;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      position: relative;
+    }
+
+    &__wrapper {
+      padding: 1rem 0;
+      position: absolute;
+      height: max-content;
+      top: 0;
+      bottom: 0;
+      margin-block: auto;
+    }
   }
 }
 
@@ -678,6 +698,11 @@ $Error: #f43030;
   @media (min-width: 768px) {
     &--project {
       height: 314px;
+    }
+
+    &--hero {
+      max-height: 600px;
+      width: 100%;
     }
   }
 

@@ -586,9 +586,8 @@ $Error: #f43030;
     }
 
     &--icon {
-      margin-right: 1rem;
-      &:last-child {
-        margin-right: 0;
+      &:not(:last-child) {
+        margin-right: 1rem;
       }
 
       &:hover,
@@ -608,6 +607,34 @@ $Error: #f43030;
     path {
       transition: all 400ms;
       fill: #fff;
+    }
+  }
+
+  @media (min-width: 768px) {
+    text-align: left;
+    padding: 1.5rem 0;
+
+    &__wrapper {
+      display: flex;
+
+      &--icons {
+        margin-left: auto;
+      }
+    }
+
+    .logo {
+      margin-right: 3rem;
+    }
+
+    &__list {
+      display: flex;
+      margin: 0;
+    }
+
+    &__item {
+      &:nth-of-type(2) {
+        margin: 0 2.625rem;
+      }
     }
   }
 }

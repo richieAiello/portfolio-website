@@ -426,6 +426,40 @@ $Error: #f43030;
   &__text {
     margin-bottom: 1.5rem;
   }
+
+  @media (min-width: 768px) {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5.5rem;
+
+    &:last-child {
+      margin-bottom: 6rem;
+    }
+
+    &__context,
+    &__context--secondary {
+      margin-top: 0;
+      max-width: 281px;
+
+      &::before {
+        margin-bottom: 2rem;
+      }
+
+      &::after {
+        margin-top: 3rem;
+      }
+    }
+
+    &__context--secondary {
+      order: -1;
+    }
+
+    &__heading,
+    &__text {
+      margin-bottom: 2rem;
+    }
+  }
 }
 
 // section details
@@ -783,6 +817,7 @@ $Error: #f43030;
 
   @media (min-width: 768px) {
     &--project {
+      width: 339px;
       height: 314px;
     }
 

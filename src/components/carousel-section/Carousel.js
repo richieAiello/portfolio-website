@@ -1,22 +1,19 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useState, useLayoutEffect } from 'react';
+import { useEffect, useState } from 'react';
 import dataCarousel from './dataCarousel';
 import CarouselAlice from './CarouselAlice';
 
 export default function Carousel(props) {
-  const [items, setItems] = useState([]);
-  const [path, setPath] = useState('');
-
   const handleDragStart = e => e.preventDefault();
 
-  useLayoutEffect(() => {
-    const newItems = [];
+  const [items, setItems] = useState(() => {
+    const initialItems = [];
 
     dataCarousel.map(item => {
       if (item.title !== props.title) {
-        newItems.push(
+        initialItems.push(
           <img
-            title={item.path}
+            path={item.path}
             src={item.src}
             alt=""
             className="image image--carousel"
@@ -27,27 +24,31 @@ export default function Carousel(props) {
       }
     });
 
-    setItems([...newItems]);
-  }, []);
+    return initialItems;
+  });
+
+  const [path, setPath] = useState(() => items[0].props.path);
 
   useEffect(() => {
-    setPath(items[0]?.props.title ?? '');
-
     const dots = document.querySelectorAll(
       '.alice-carousel__dots-item'
     );
+
     dots.forEach(dot => {
       dot.setAttribute('tabindex', 0);
       dot.addEventListener('keydown', e => {
         e.code === 'Enter' && e.currentTarget.click();
       });
+      dot.addEventListener('mouseenter', e => {
+        e.currentTarget.click();
+      });
     });
-  }, [items]);
+  }, []);
 
   const handleSlideChanged = () => {
-    const imagePath =
-      document.querySelector('.__active .image')?.title ?? '';
-    setPath(imagePath);
+    const currentImage = document.querySelector('.__active .image');
+    const currentPath = currentImage.getAttribute('path');
+    setPath(currentPath);
   };
 
   const handleLinkHover = e => {
@@ -70,6 +71,7 @@ export default function Carousel(props) {
         to={path}
         className="btn btn--white btn--carousel link"
         onMouseEnter={handleLinkHover}
+        onFocus={handleLinkHover}
       >
         View Project
       </Link>

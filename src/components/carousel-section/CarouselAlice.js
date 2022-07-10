@@ -1,10 +1,10 @@
-import { memo } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/scss/alice-carousel.scss';
 
 const CarouselAlice = props => {
   return (
     <AliceCarousel
+      animationDuration={200}
       items={props.items}
       touchTracking={false}
       keyboardNavigation
@@ -19,4 +19,4 @@ const CarouselAlice = props => {
   );
 };
 
-export default memo(CarouselAlice);
+export default CarouselAlice;

@@ -321,12 +321,13 @@ $Error: #f43030;
   scroll-margin-top: 6.5rem;
 
   &__context {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+
     &::before {
       margin-block: 2rem;
-    }
-
-    &::after {
-      margin-top: 3.125rem;
     }
   }
 
@@ -336,6 +337,26 @@ $Error: #f43030;
 
   &__text {
     margin-bottom: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 280px 340px;
+    grid-template-rows: minmax(600px, 100%);
+    justify-content: space-between;
+    margin-bottom: 6rem;
+    scroll-margin-top: 3rem;
+
+    &__context {
+      &::before {
+        margin-block: unset;
+        margin-bottom: 3rem;
+      }
+
+      &::after {
+        margin-top: auto;
+      }
+    }
   }
 }
 
@@ -642,9 +663,17 @@ $Error: #f43030;
     }
   }
 
+  &--about {
+    margin-bottom: 3.125rem;
+  }
+
   @media (min-width: 768px) {
     &--hamburger {
       display: none;
+    }
+
+    &--about {
+      margin-bottom: 3rem;
     }
   }
 }
@@ -702,7 +731,11 @@ $Error: #f43030;
 
     &--hero {
       max-height: 600px;
-      width: 100%;
+    }
+
+    &--about {
+      height: 100%;
+      object-position: 45% 50%;
     }
   }
 

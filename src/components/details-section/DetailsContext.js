@@ -1,10 +1,10 @@
 import Context from '../shared/Context';
-import data from './data';
+import detailsData from './detailsData';
 
 export default function DetailsContext({ title, text, processText }) {
   let currentObj = {};
 
-  data.filter(obj => {
+  detailsData.filter(obj => {
     obj.title === title && (currentObj = obj);
   });
 
@@ -18,6 +18,8 @@ export default function DetailsContext({ title, text, processText }) {
       link
       path={currentObj.url}
       linkText="Visit Website"
+      repo
+      repoPath={currentObj.repo}
     />
   );
 }

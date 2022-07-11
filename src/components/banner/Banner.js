@@ -1,9 +1,9 @@
-import data from "../details-section/data";
+import detailsData from '../details-section/detailsData';
 
 export default function Banner({ title }) {
-  let image = "";
+  let image = '';
 
-  data.filter((obj) => {
+  detailsData.filter(obj => {
     let banner = obj.src.banner;
     obj.title === title && (image = banner);
   });

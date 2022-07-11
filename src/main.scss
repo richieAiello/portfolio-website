@@ -429,6 +429,12 @@ $Error: #f43030;
       margin-bottom: 0;
     }
   }
+
+  @media (min-width: 1440px) {
+    &::before {
+      width: 500px;
+    }
+  }
 }
 
 // section project

@@ -21,11 +21,13 @@ const ContactContext = props => {
       </div>
       <address className="contact__address">
         <img src={email} alt="" className="image" /> :
-        richard.a.aiello@gmail.com
+        <span className="contact__span">
+          richard.a.aiello@gmail.com
+        </span>
       </address>
       <address className="contact__address">
         <img src={discord} alt="" className="image" /> :
-        richieAiello#3097
+        <span className="contact__span">richieAiello#3097</span>
       </address>
     </Context>
   );

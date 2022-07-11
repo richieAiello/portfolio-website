@@ -631,14 +631,16 @@ $Error: #f43030;
       margin-bottom: 2.5rem;
     }
   }
-}
 
-// section background
-.background {
-  margin-bottom: 2.5rem;
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: 350px 635px;
+    justify-content: space-between;
 
-  &__heading {
-    margin-bottom: 1.75rem;
+    &__context {
+      display: initial;
+      grid-column: 1;
+    }
   }
 }
 
@@ -646,12 +648,13 @@ $Error: #f43030;
 .preview {
   margin-bottom: 4rem;
 
-  &__heading {
-    margin-bottom: 2.5rem;
-  }
-
   @media (min-width: 768px) {
     margin-bottom: 5rem;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 7.5rem;
+    grid-column: 2;
   }
 }
 
@@ -696,6 +699,10 @@ $Error: #f43030;
     margin-top: 1rem;
   }
 
+  &__span {
+    margin-left: 1rem;
+  }
+
   &__icons {
     margin-top: 1.5rem;
   }
@@ -718,6 +725,58 @@ $Error: #f43030;
           fill: $Cyan;
         }
       }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &__context {
+      display: grid;
+      grid-template-columns: 600px 375px;
+      grid-template-rows:
+        auto
+        auto
+        auto
+        auto
+        auto
+        1fr
+        auto;
+      justify-content: space-between;
+      align-items: flex-start;
+      justify-items: flex-start;
+
+      &::before {
+        margin-bottom: 5rem;
+        grid-column: 1/-1;
+      }
+
+      &::after {
+        margin-top: 5rem;
+        grid-column: 1/-1;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 2rem;
+      grid-column: 1;
+    }
+
+    &__text {
+      margin-bottom: 0;
+      grid-row: 3/7;
+      grid-column: 1;
+    }
+
+    &__address {
+      grid-column: 2;
+      font-size: 1rem;
+    }
+
+    &__icons {
+      grid-column: 2;
+    }
+
+    &__link--icon:not(:last-child) {
+      margin-right: 1.5rem;
     }
   }
 }
@@ -934,6 +993,11 @@ $Error: #f43030;
   @media (min-width: 1440px) {
     font-size: 0.875rem;
     line-height: 1rem;
+
+    &--contact {
+      grid-column: 2;
+      grid-row: 2;
+    }
   }
 }
 
@@ -1011,6 +1075,10 @@ $Error: #f43030;
     &--project {
       width: 540px;
       height: 500px;
+    }
+
+    &--banner {
+      margin-bottom: 7.5rem;
     }
   }
 }

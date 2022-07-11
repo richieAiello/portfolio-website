@@ -493,35 +493,43 @@ $Error: #f43030;
 
   @media (min-width: 768px) {
     &__context {
-      position: relative;
       display: grid;
       grid-template-columns: 281px 339px;
+      grid-template-rows:
+        auto
+        minmax(74px, auto)
+        minmax(76px, auto)
+        auto
+        auto;
       justify-content: space-between;
+      align-items: flex-start;
+      justify-items: flex-start;
       margin-bottom: 2.5rem;
 
       &::before {
+        grid-row: 1;
         grid-column: 1/-1;
         margin-bottom: 2rem;
       }
 
       &::after {
+        grid-row: 5;
         grid-column: 1/-1;
         margin-top: 2rem;
       }
     }
 
     &__heading {
-      position: absolute;
-      top: 32;
+      grid: row 2;
     }
 
     &__text {
+      grid-row: 2/5;
       grid-column: 2;
       margin-bottom: 0rem;
 
       &--secondary {
-        position: absolute;
-        top: 90;
+        grid-row: 3;
       }
     }
   }
@@ -807,8 +815,7 @@ $Error: #f43030;
     }
 
     &--details {
-      position: absolute;
-      top: 166;
+      grid-row: 4;
     }
   }
 }
@@ -945,6 +952,15 @@ $Error: #f43030;
   }
 }
 
+@keyframes fade-in-hero {
+  0% {
+    background-color: rgba(#fff, 0);
+  }
+  100% {
+    background-color: rgba(#fff, 100);
+  }
+}
+
 @keyframes fade-out {
   0% {
     opacity: 100%;
@@ -980,4 +996,10 @@ $Error: #f43030;
 
 .fade-out {
   animation: fade-out 400ms forwards;
+}
+
+@media (min-width: 768px) {
+  .fade-in-hero {
+    animation: fade-in-hero 400ms 1s backwards;
+  }
 }

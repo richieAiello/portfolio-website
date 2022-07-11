@@ -56,6 +56,11 @@ $Error: #f43030;
   font-size: 1rem;
   line-height: 1.875rem;
   color: $Greyish-dark-blue;
+
+  @media (min-width: 1440px) {
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
 }
 
 .container {
@@ -375,6 +380,12 @@ $Error: #f43030;
         margin-top: auto;
       }
     }
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: 600px 400px;
+    margin-bottom: 7.5rem;
+    scroll-margin-top: 4rem;
   }
 }
 
@@ -832,6 +843,11 @@ $Error: #f43030;
       grid-row: 4;
     }
   }
+
+  @media (min-width: 1440px) {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
 }
 
 /*********************************
@@ -902,7 +918,7 @@ $Error: #f43030;
     }
 
     &--about {
-      object-position: 45% 50%;
+      object-position: unset;
     }
 
     &--project {

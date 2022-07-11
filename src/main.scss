@@ -50,6 +50,13 @@ $Error: #f43030;
 /*********************************
   BASE STYLES
 *********************************/
+// Used to keep footer at the bottom of page.
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .body {
   font-family: $Font-PubSans;
   font-weight: 400;
@@ -785,6 +792,8 @@ $Error: #f43030;
   FOOTER
 *********************************/
 .footer {
+  // Keeps the footer at the bottom of page, based off the #root elements styling.
+  margin-top: auto;
   background-color: $Greyish-dark-blue;
   color: #fff;
   text-align: center;

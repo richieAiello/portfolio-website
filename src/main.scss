@@ -19,6 +19,28 @@ $Error: #f43030;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
+  // firefox support
+  scrollbar-color: $Greyish-dark-blue $Light-grey;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $Light-grey;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $Greyish-dark-blue;
+  border-radius: 100vw;
+  border: 0.25rem solid $Light-grey;
+
+  &:hover {
+    background-color: rgba($Greyish-dark-blue, 0.85);
+  }
 }
 
 // Additional styles for alice carousel package

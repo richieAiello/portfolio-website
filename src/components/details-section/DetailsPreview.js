@@ -1,9 +1,9 @@
-import data from "./data";
+import detailsData from './detailsData';
 
 export default function DetailsPreview({ title }) {
   let currentObj = {};
 
-  data.filter((obj) => {
+  detailsData.filter(obj => {
     obj.title === title && (currentObj = obj);
   });
 
@@ -12,8 +12,7 @@ export default function DetailsPreview({ title }) {
   const heading = currentObj.heading;
 
   return (
-    <section className="preview">
-      <h3 className="preview__heading heading--secondary">Handheld Preview</h3>
+    <div className="preview">
       <img
         src={tablet}
         alt={`Static preview of the ${heading} website on dessktop.`}
@@ -24,6 +23,6 @@ export default function DetailsPreview({ title }) {
         alt={`Static preview of the ${heading} website on mobile.`}
         className="image image--preview"
       />
-    </section>
+    </div>
   );
 }

@@ -50,12 +50,24 @@ $Error: #f43030;
 /*********************************
   BASE STYLES
 *********************************/
+// Used to keep footer at the bottom of page.
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .body {
   font-family: $Font-PubSans;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.875rem;
   color: $Greyish-dark-blue;
+
+  @media (min-width: 1440px) {
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
 }
 
 .container {
@@ -236,6 +248,12 @@ $Error: #f43030;
   }
 }
 
+@media (min-width: 1440px) {
+  .nav__item:not(:last-child) {
+    margin-right: 4rem;
+  }
+}
+
 .hamburger {
   background-color: $Greyish-dark-blue;
   width: 1.25rem;
@@ -317,6 +335,22 @@ $Error: #f43030;
       margin-block: auto;
     }
   }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 6rem;
+
+    &__wrapper {
+      padding-top: 1.5rem;
+      max-width: 350px;
+      background-color: #fff;
+    }
+
+    &__heading {
+      font-size: 3.125rem;
+      line-height: 3.125rem;
+      letter-spacing: -0.45px;
+    }
+  }
 }
 
 // about section
@@ -362,6 +396,12 @@ $Error: #f43030;
       }
     }
   }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: 600px 400px;
+    margin-bottom: 7.5rem;
+    scroll-margin-top: 4rem;
+  }
 }
 
 // collaboration section
@@ -396,6 +436,12 @@ $Error: #f43030;
       margin-bottom: 0;
     }
   }
+
+  @media (min-width: 1440px) {
+    &::before {
+      width: 500px;
+    }
+  }
 }
 
 // section project
@@ -404,7 +450,7 @@ $Error: #f43030;
   justify-items: center;
   margin-bottom: 4.5rem;
 
-  &:last-child {
+  &:nth-last-of-type(2) {
     margin-bottom: 5rem;
   }
 
@@ -431,9 +477,9 @@ $Error: #f43030;
     grid-template-columns: auto auto;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 5.5rem;
+    margin-bottom: 5rem;
 
-    &:last-child {
+    &:nth-last-of-type(2) {
       margin-bottom: 6rem;
     }
 
@@ -443,7 +489,7 @@ $Error: #f43030;
       max-width: 281px;
 
       &::before {
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
       }
 
       &::after {
@@ -458,6 +504,36 @@ $Error: #f43030;
     &__heading,
     &__text {
       margin-bottom: 2rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 6.5rem;
+
+    &:nth-last-of-type(2) {
+      margin-bottom: 7.5rem;
+    }
+
+    &__context,
+    &__context--secondary {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100%;
+      max-width: 400px;
+
+      &::before {
+        margin-bottom: auto;
+      }
+
+      &::after {
+        margin-top: auto;
+      }
+    }
+
+    &__heading,
+    &__text {
+      margin-bottom: 1.5rem;
     }
   }
 }
@@ -491,6 +567,29 @@ $Error: #f43030;
     }
   }
 
+  &__link--icon {
+    width: max-content;
+    display: block;
+    margin-bottom: 1.5rem;
+
+    .icon {
+      vertical-align: middle;
+      path {
+        transition: all 400ms;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      .icon {
+        vertical-align: middle;
+        path {
+          fill: $Cyan;
+        }
+      }
+    }
+  }
+
   @media (min-width: 768px) {
     &__context {
       display: grid;
@@ -499,7 +598,8 @@ $Error: #f43030;
         auto
         minmax(74px, auto)
         minmax(76px, auto)
-        auto
+        minmax(24px, auto)
+        1fr
         auto;
       justify-content: space-between;
       align-items: flex-start;
@@ -513,7 +613,7 @@ $Error: #f43030;
       }
 
       &::after {
-        grid-row: 5;
+        grid-row: 6;
         grid-column: 1/-1;
         margin-top: 2rem;
       }
@@ -524,7 +624,7 @@ $Error: #f43030;
     }
 
     &__text {
-      grid-row: 2/5;
+      grid-row: 2/6;
       grid-column: 2;
       margin-bottom: 0rem;
 
@@ -532,15 +632,22 @@ $Error: #f43030;
         grid-row: 3;
       }
     }
+
+    &__link--icon {
+      grid-row: 4;
+      margin-bottom: 2.5rem;
+    }
   }
-}
 
-// section background
-.background {
-  margin-bottom: 2.5rem;
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: 350px 635px;
+    justify-content: space-between;
 
-  &__heading {
-    margin-bottom: 1.75rem;
+    &__context {
+      display: initial;
+      grid-column: 1;
+    }
   }
 }
 
@@ -548,12 +655,13 @@ $Error: #f43030;
 .preview {
   margin-bottom: 4rem;
 
-  &__heading {
-    margin-bottom: 2.5rem;
-  }
-
   @media (min-width: 768px) {
     margin-bottom: 5rem;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 7.5rem;
+    grid-column: 2;
   }
 }
 
@@ -598,6 +706,10 @@ $Error: #f43030;
     margin-top: 1rem;
   }
 
+  &__span {
+    margin-left: 1rem;
+  }
+
   &__icons {
     margin-top: 1.5rem;
   }
@@ -622,12 +734,66 @@ $Error: #f43030;
       }
     }
   }
+
+  @media (min-width: 1440px) {
+    &__context {
+      display: grid;
+      grid-template-columns: 600px 375px;
+      grid-template-rows:
+        auto
+        auto
+        auto
+        auto
+        auto
+        1fr
+        auto;
+      justify-content: space-between;
+      align-items: flex-start;
+      justify-items: flex-start;
+
+      &::before {
+        margin-bottom: 5rem;
+        grid-column: 1/-1;
+      }
+
+      &::after {
+        margin-top: 5rem;
+        grid-column: 1/-1;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 2rem;
+      grid-column: 1;
+    }
+
+    &__text {
+      margin-bottom: 0;
+      grid-row: 3/7;
+      grid-column: 1;
+    }
+
+    &__address {
+      grid-column: 2;
+      font-size: 1rem;
+    }
+
+    &__icons {
+      grid-column: 2;
+    }
+
+    &__link--icon:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
 }
 
 /*********************************
   FOOTER
 *********************************/
 .footer {
+  // Keeps the footer at the bottom of page, based off the #root elements styling.
+  margin-top: auto;
   background-color: $Greyish-dark-blue;
   color: #fff;
   text-align: center;
@@ -715,6 +881,20 @@ $Error: #f43030;
     &__item {
       &:nth-of-type(2) {
         margin: 0 2.625rem;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    padding: 2rem 0;
+
+    &__link {
+      font-size: 0.875rem;
+
+      &--icon {
+        &:not(:last-child) {
+          margin-right: 1.5rem;
+        }
       }
     }
   }
@@ -815,7 +995,17 @@ $Error: #f43030;
     }
 
     &--details {
-      grid-row: 4;
+      grid-row: 5;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 0.875rem;
+    line-height: 1rem;
+
+    &--contact {
+      grid-column: 2;
+      grid-row: 2;
     }
   }
 }
@@ -883,8 +1073,21 @@ $Error: #f43030;
   }
 
   @media (min-width: 1440px) {
+    &--hero {
+      max-height: 800px;
+    }
+
+    &--about {
+      object-position: unset;
+    }
+
     &--project {
+      width: 540px;
       height: 500px;
+    }
+
+    &--banner {
+      margin-bottom: 7.5rem;
     }
   }
 }

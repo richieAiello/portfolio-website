@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import GitHub from 'jsx:../../assets/icons/github.svg';
 
 export default function Context({
   mod,
@@ -9,8 +10,10 @@ export default function Context({
   processText,
   route,
   link,
-  path,
   linkText,
+  repo,
+  repoPath,
+  path,
   children,
 }) {
   return (
@@ -23,6 +26,16 @@ export default function Context({
       <p className={`${mod}__text`}>{text}</p>
       {process && (
         <p className={`${mod}__text--secondary`}>{processText}</p>
+      )}
+      {repo && (
+        <a
+          href={repoPath}
+          target="_blank"
+          className={`${mod}__link--icon link`}
+          aria-label="View site repository on github."
+        >
+          <GitHub className="icon" />
+        </a>
       )}
       {route && (
         <Link to={path} className={`btn btn--${mod} btn--white link`}>

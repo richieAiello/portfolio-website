@@ -317,6 +317,20 @@ $Error: #f43030;
       margin-block: auto;
     }
   }
+
+  @media (min-width: 1440px) {
+    &__wrapper {
+      padding-top: 1.5rem;
+      max-width: 350px;
+      background-color: #fff;
+    }
+
+    &__heading {
+      font-size: 3.125rem;
+      line-height: 3.125rem;
+      letter-spacing: -0.45px;
+    }
+  }
 }
 
 // about section
@@ -883,6 +897,14 @@ $Error: #f43030;
   }
 
   @media (min-width: 1440px) {
+    &--hero {
+      max-height: 800px;
+    }
+
+    &--about {
+      object-position: 45% 50%;
+    }
+
     &--project {
       height: 500px;
     }

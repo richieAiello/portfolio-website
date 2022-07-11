@@ -13,9 +13,9 @@ export default function DetailsContext({ title, text, processText }) {
       mod="details"
       heading={currentObj.heading}
       text={text}
-      process={true}
+      process
       processText={processText}
-      link={true}
+      link
       path={currentObj.url}
       linkText="Visit Website"
     />

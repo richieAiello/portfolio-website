@@ -4,37 +4,51 @@ import dataCarousel from './dataCarousel';
 import CarouselAlice from './CarouselAlice';
 
 export default function Carousel(props) {
-  const [path, setPath] = useState('');
-
   const handleDragStart = e => e.preventDefault();
 
-  const items = [];
+  const [items, setItems] = useState(() => {
+    const initialItems = [];
 
-  dataCarousel.map(item => {
-    if (item.title !== props.title) {
-      items.push(
-        <img
-          title={item.path}
-          src={item.src}
-          alt=""
-          className="image image--carousel"
-          onDragStart={handleDragStart}
-          role="presentation"
-        />
-      );
-    }
+    dataCarousel.map(item => {
+      if (item.title !== props.title) {
+        initialItems.push(
+          <img
+            path={item.path}
+            src={item.src}
+            alt=""
+            className="image image--carousel"
+            onDragStart={handleDragStart}
+            role="presentation"
+          />
+        );
+      }
+    });
+
+    return initialItems;
   });
 
+  const [path, setPath] = useState(() => items[0].props.path);
+
   useEffect(() => {
-    const imagePath =
-      document.querySelector('.__active .image').title ?? '';
-    setPath(imagePath);
+    const dots = document.querySelectorAll(
+      '.alice-carousel__dots-item'
+    );
+
+    dots.forEach(dot => {
+      dot.setAttribute('tabindex', 0);
+      dot.addEventListener('keydown', e => {
+        e.code === 'Enter' && e.currentTarget.click();
+      });
+      dot.addEventListener('mouseenter', e => {
+        e.currentTarget.click();
+      });
+    });
   }, []);
 
   const handleSlideChanged = () => {
-    const imagePath =
-      document.querySelector('.__active .image').title ?? '';
-    setPath(imagePath);
+    const currentImage = document.querySelector('.__active .image');
+    const currentPath = currentImage.getAttribute('path');
+    setPath(currentPath);
   };
 
   const handleLinkHover = e => {
@@ -57,6 +71,7 @@ export default function Carousel(props) {
         to={path}
         className="btn btn--white btn--carousel link"
         onMouseEnter={handleLinkHover}
+        onFocus={handleLinkHover}
       >
         View Project
       </Link>

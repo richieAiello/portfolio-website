@@ -813,10 +813,20 @@ $Error: #f43030;
     &__address {
       grid-column: 2;
       font-size: 1rem;
+
+      &:first-of-type {
+        grid-row: 5;
+      }
+
+      &:last-of-type {
+        grid-row: 6;
+      }
     }
 
     &__icons {
+      margin-top: 1.5rem;
       grid-column: 2;
+      grid-row: 4;
     }
 
     &__link--icon:not(:last-child) {
@@ -1042,7 +1052,7 @@ $Error: #f43030;
 
     &--contact {
       grid-column: 2;
-      grid-row: 2;
+      grid-row: 3;
     }
   }
 }

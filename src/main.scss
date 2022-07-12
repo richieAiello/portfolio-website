@@ -3,8 +3,8 @@
 *********************************/
 $Font-Ibarra: 'Ibarra Real Nova', serif;
 $Font-PubSans: 'Public Sans', sans-serif;
-$Cyan: #5fb4a2;
-$Dark-blue: #203a4c;
+$Cyan: #97cec1;
+$Blue: #0071bc;
 $Greyish-dark-blue: #33323d;
 $Grey: #eaeaeb;
 $Light-grey: #fafafa;
@@ -59,6 +59,7 @@ $Error: #f43030;
       width: 1rem !important;
       height: 1rem !important;
       border-radius: 10px !important;
+      background-color: $Blue !important;
 
       &:not(:last-child) {
         margin-right: 1.5rem !important;
@@ -112,6 +113,7 @@ $Error: #f43030;
 .link {
   color: inherit;
   transition: all 400ms;
+  font-weight: 600;
 }
 
 .btn {
@@ -119,7 +121,6 @@ $Error: #f43030;
   border: initial;
   background-color: initial;
   font-family: inherit;
-  font-weight: inherit;
 }
 
 .link {
@@ -153,7 +154,7 @@ $Error: #f43030;
   letter-spacing: -0.36px;
 
   &--secondary {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 2rem;
     letter-spacing: -0.29px;
 
@@ -275,7 +276,7 @@ $Error: #f43030;
 
       &:hover,
       &:focus {
-        color: $Cyan;
+        color: $Blue;
       }
     }
   }
@@ -594,8 +595,8 @@ $Error: #f43030;
 
     &--secondary {
       font-weight: 700;
-      font-size: 0.875rem;
-      color: $Cyan;
+      font-size: 0.9375rem;
+      color: $Blue;
       margin-bottom: 1.5rem;
     }
   }
@@ -617,7 +618,7 @@ $Error: #f43030;
       .icon {
         vertical-align: middle;
         path {
-          fill: $Cyan;
+          fill: $Blue;
         }
       }
     }
@@ -680,6 +681,10 @@ $Error: #f43030;
     &__context {
       display: initial;
       grid-column: 1;
+    }
+
+    &__text--secondary {
+      font-size: 1rem;
     }
   }
 }
@@ -766,7 +771,7 @@ $Error: #f43030;
     &:focus {
       .icon {
         path {
-          fill: $Cyan;
+          fill: $Blue;
         }
       }
     }
@@ -1254,10 +1259,12 @@ $Error: #f43030;
   }
 }
 
-// /**********************************
-//   DARK MODE
-// **********************************/
+/**********************************
+  DARK MODE
+**********************************/
 
-// @media (prefers-color-scheme: dark) {
-
-// }
+@media (prefers-color-scheme: dark) {
+  .body {
+    background-color: $Greyish-dark-blue;
+  }
+}

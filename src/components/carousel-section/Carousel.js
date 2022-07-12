@@ -60,7 +60,7 @@ export default function Carousel(props) {
 
   return (
     <section className="carousel">
-      <h3 className="carousel__heading heading">
+      <h3 className="carousel__heading heading--secondary">
         Browse My Portfolio
       </h3>
       <CarouselAlice

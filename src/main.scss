@@ -43,7 +43,10 @@ $Error: #f43030;
   }
 }
 
-// Additional styles for alice carousel package
+// Additional styles for alice carousel package.
+// Normally I would avoid !important.
+// I am overwritting some existing styles provided by the npm package,
+// without having to alter the existing scss file.
 .alice-carousel {
   display: flex;
   flex-direction: column;
@@ -153,6 +156,14 @@ $Error: #f43030;
     font-weight: 400;
     font-size: 2rem;
     letter-spacing: -0.29px;
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -701,6 +712,10 @@ $Error: #f43030;
   @media (min-width: 768px) {
     margin-bottom: 5rem;
   }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 7.5rem;
+  }
 }
 
 // section contact
@@ -1228,3 +1243,11 @@ $Error: #f43030;
     animation: fade-in-hero 400ms 1s backwards;
   }
 }
+
+// /**********************************
+//   DARK MODE
+// **********************************/
+
+// @media (prefers-color-scheme: dark) {
+
+// }

@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import Logo from "jsx:../../assets/icons/logo.svg";
-import HamburgerBtn from "./HambugerBtn";
-import NavMenu from "./NavMenu";
-import NavShadow from "./NavShadow";
-import clsx from "clsx";
+import { useState, useEffect } from 'react';
+import Logo from 'jsx:../../assets/icons/logo.svg';
+import HamburgerBtn from './HambugerBtn';
+import NavMenu from './NavMenu';
+import NavShadow from './NavShadow';
+import clsx from 'clsx';
 
 export default function Nav(props) {
   const [menuVisibile, setMenuVisibile] = useState(false);
@@ -35,12 +35,18 @@ export default function Nav(props) {
   If hidden was true, reveals the menu.
   Chooses whether to animate in or out based on
   the menuVisible state variable. */
-  const handleHamburgerClick = (e) => {
+  const handleHamburgerClick = e => {
     setDisabled(true);
     setMenuVisibile(!menuVisibile);
     hidden && setHidden(false);
 
     menuVisibile ? setAnimateOut(true) : setAnimateIn(true);
+  };
+
+  const handleLinkClick = e => {
+    if (window.innerWidth < 768) {
+      handleHamburgerClick();
+    }
   };
 
   return (
@@ -51,24 +57,26 @@ export default function Nav(props) {
         <HamburgerBtn
           disabled={disabled}
           onClick={handleHamburgerClick}
-          classesTop={clsx({ "flip-top": menuVisibile })}
-          classesBottom={clsx({ "flip-bottom": menuVisibile })}
+          classesTop={clsx({ 'flip-top': menuVisibile })}
+          classesBottom={clsx({ 'flip-bottom': menuVisibile })}
         />
         {/* Revealed with css on larger screens */}
         <NavMenu
           classes={clsx({
             hidden: hidden,
-            "slide-in": animateIn,
-            "slide-out": animateOut,
+            'slide-in': animateIn,
+            'slide-out': animateOut,
           })}
+          onClick={handleLinkClick}
         />
         {/* Hidden with css on larger screens */}
         <NavShadow
           classes={clsx({
             hidden: hidden,
-            "fade-in": animateIn,
-            "fade-out": animateOut,
+            'fade-in': animateIn,
+            'fade-out': animateOut,
           })}
+          onClick={handleHamburgerClick}
         />
       </nav>
     </header>

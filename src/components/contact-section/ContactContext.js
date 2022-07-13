@@ -8,7 +8,14 @@ const ContactContext = props => {
     <Context
       mod="contact"
       heading="Get In Touch"
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      text={`
+        I am currently seeking remote work as a junior front-end web developer, preferably
+        a full-time position, but I am open to other opportunites as well. I consider myself
+        a dedicated, resilient, and positive individual. I am comfortable communicating, 
+        working as part of a team, and learning new skills. I'd love to hear about your company,
+        what you are working on, and how I could help. Please feel free to send me an email using
+        the provided link or address, and checkout any of my profiles.
+      `}
       link
       path="mailto: richard.a.aiello@gmail.com"
       linkText="Email Me"

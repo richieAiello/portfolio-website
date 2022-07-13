@@ -343,7 +343,13 @@ $Error: #f43030;
   }
 
   @media (min-width: 768px) {
-    margin-top: 0;
+    &:not(.main--contact) {
+      margin-top: 0;
+    }
+
+    &--contact {
+      margin-block: auto;
+    }
   }
 }
 
@@ -787,6 +793,11 @@ $Error: #f43030;
           fill: $Blue;
         }
       }
+    }
+  }
+  @media (min-width: 768px) {
+    &__context {
+      margin-bottom: 0;
     }
   }
 

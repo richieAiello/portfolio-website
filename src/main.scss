@@ -56,10 +56,11 @@ $Error: #f43030;
     margin: 1.5rem 0 !important;
 
     &-item:not(.__custom) {
-      width: 1rem !important;
-      height: 1rem !important;
-      border-radius: 10px !important;
-      background-color: $Blue !important;
+      width: 1.125rem !important;
+      height: 1.125rem !important;
+      border-radius: 100px !important;
+      border: 3px solid $Greyish-dark-blue;
+      background-color: rgba($Greyish-dark-blue, 15%) !important;
 
       &:not(:last-child) {
         margin-right: 1.5rem !important;
@@ -68,6 +69,12 @@ $Error: #f43030;
       &:hover,
       &.__active {
         background-color: $Greyish-dark-blue !important;
+      }
+
+      &:focus {
+        border: 2px solid #fff;
+        outline: 3px solid $Blue;
+        background-color: rgba($Greyish-dark-blue, 75%) !important;
       }
     }
   }
@@ -412,17 +419,12 @@ $Error: #f43030;
   }
 
   @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: 280px 340px;
-    grid-template-rows: minmax(600px, 100%);
-    justify-content: space-between;
     margin-bottom: 6rem;
     scroll-margin-top: 3rem;
 
     &__context {
       &::before {
-        margin-block: unset;
-        margin-bottom: 3rem;
+        margin-block: 3rem;
       }
 
       &::after {
@@ -432,9 +434,19 @@ $Error: #f43030;
   }
 
   @media (min-width: 1440px) {
-    grid-template-columns: 600px 400px;
+    display: grid;
+    grid-template-columns: 550px 450px;
+    grid-template-rows: minmax(600px, 100%);
+    justify-content: space-between;
     margin-bottom: 7.5rem;
     scroll-margin-top: 4rem;
+
+    &__context {
+      &::before {
+        margin-block: unset;
+        margin-bottom: 2.5rem;
+      }
+    }
   }
 }
 
@@ -762,6 +774,7 @@ $Error: #f43030;
     }
 
     .icon {
+      vertical-align: middle;
       path {
         transition: all 400ms;
       }
@@ -966,10 +979,21 @@ $Error: #f43030;
     cursor: pointer;
   }
 
+  &:focus {
+    outline: 3px solid $Blue;
+    border-color: $Blue;
+  }
+
   &--hamburger {
     height: 1rem;
     width: 1.25rem;
     position: relative;
+
+    &:hover {
+      .hamburger {
+        background-color: $Blue;
+      }
+    }
   }
 
   &--hero {
@@ -1078,9 +1102,9 @@ $Error: #f43030;
   }
 
   &--about {
-    height: 346px;
+    height: 360px;
     width: 100%;
-    object-position: 50% 85%;
+    object-position: 50% 75%;
     object-fit: cover;
   }
 
@@ -1119,8 +1143,8 @@ $Error: #f43030;
     }
 
     &--about {
-      height: 100%;
-      object-position: 45% 50%;
+      height: 400px;
+      object-position: 50% 80%;
     }
   }
 
@@ -1130,6 +1154,8 @@ $Error: #f43030;
     }
 
     &--about {
+      height: 100%;
+      margin-block: auto;
       object-position: unset;
     }
 

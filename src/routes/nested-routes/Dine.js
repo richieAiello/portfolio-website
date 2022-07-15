@@ -12,9 +12,7 @@ export default function Dine(props) {
         <DetailsContext
           title="dine"
           text={`
-            A 2 page website consisting of CSS-Grid, Flexbox, positioned elements, and a reservation form for 
-            booking tables. Form validation on the client side was handled with the JustValidate npm
-            package. The events section on the home page is interactive and animated with keyframes as well. 
+            Dine is a 2-page website consisting of CSS-Grid, Flexbox, positioned elements, and a reservation form for booking tables. JustValidate handles form validation on the client-side. Additionally, the events section on the home page is interactive and animated with keyframes. I learned much about cross-browser compatibility with animations through building this website. 
           `}
           processText={`JavaScript / JustValidate / SCSS / HTML / Parcel / Figma / Frontend Mentor`}
         />

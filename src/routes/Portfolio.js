@@ -53,8 +53,7 @@ export default function Portfolio(props) {
           secondary={true}
           heading="Dine Restaurant"
           text={`
-            A 2 page design by Frontend Mentor. A challenging experience at the time, consisting of CSS-Grid, Flexbox,
-            positioned elements, and a reservation form for booking tables.
+            Dine is a 2-page design provided by Frontend Mentor. Building this project was a challenging experience at the time. Dine's code contains CSS-Grid, Flexbox, positioned elements, and a reservation form for booking tables. There are some animations in the event section as well.
           `}
           route={true}
           path="/details/dine"
@@ -67,8 +66,7 @@ export default function Portfolio(props) {
           mod="project"
           heading="Creative Agency"
           text={`
-            A landing page design by Frontend mentor. At the time, building this website trained me to successfully implement
-            a demanding CSS-Grid layout design, as well as create a native scrolling list with Glider.js. 
+            Creative is a landing page design by Frontend Mentor. Building this website trained me to implement a demanding CSS-Grid layout. This project also contains a native scrolling list with Glider.js. 
           `}
           route={true}
           path="/details/creative"

@@ -12,8 +12,7 @@ export default function Creative(props) {
         <DetailsContext
           title="creative"
           text={`
-            A distinctly responsive landing page that helped me gain confidence using CSS-Grid and 
-            the position property. Contains an accessible scolling list, built with Glider.js. 
+            Creative is a responsive landing page that helped me gain confidence using CSS-Grid and the position property. This website is very responsive and contains an accessible scrolling list built with Glider.js.
           `}
           processText="JavaScript / Glider.js / SCSS / HTML / Parcel / Figma / Frontend Mentor"
         />

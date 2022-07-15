@@ -4,7 +4,7 @@ import { forwardRef } from 'react';
 
 const About = forwardRef((props, ref) => {
   return (
-    <section className="about container" ref={ref}>
+    <div className="about container" ref={ref}>
       <img src={image} alt="" className="image image--about" />
       <Context
         mod="about"
@@ -26,7 +26,7 @@ const About = forwardRef((props, ref) => {
         path="/portfolio"
         linkText="View Portfolio"
       />
-    </section>
+    </div>
   );
 });
 

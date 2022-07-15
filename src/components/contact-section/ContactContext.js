@@ -9,9 +9,9 @@ const ContactContext = props => {
       mod="contact"
       heading="Get In Touch"
       text={`
-        I am currently seeking remote work as a junior front-end web developer, preferably
+        I am based in Long Island, New York, and currently seeking remote work as a junior front-end web developer, preferably
         a full-time position, but I am open to other opportunites as well. I consider myself
-        a dedicated, resilient, and positive individual. I am comfortable communicating, 
+        a dedicated, resilient, and positive individual, who is comfortable communicating, 
         working as part of a team, and learning new skills. I'd love to hear about your company,
         what you are working on, and how I could help. Please feel free to send me an email using
         the provided link or address, and checkout any of my profiles.

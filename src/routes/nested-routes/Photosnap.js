@@ -11,8 +11,12 @@ export default function Photosnap(props) {
       <DetailsSection>
         <DetailsContext
           title="photosnap"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          processText="process"
+          text={`
+            A 4 page design equipped with plenty of CSS-Grid and an accessible, responsive table. This project
+            helped me to sharpen my JavaScript skills, and provided me with more multi-page site experience. A
+            perfect site to rebuild with React in the future.
+          `}
+          processText={`JavaScript / SCSS / HTML / Parcel / Figma / Frontend Mentor`}
         />
         <DetailsPreview title="photosnap" />
       </DetailsSection>

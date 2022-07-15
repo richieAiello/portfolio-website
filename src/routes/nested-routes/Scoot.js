@@ -11,8 +11,13 @@ export default function Scoot(props) {
       <DetailsSection>
         <DetailsContext
           title="scoot"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          processText="process"
+          text={`
+            A 4 page design containing an extensive amount of positioning with SCSS. 
+            This project has highly responsive and visually pleasing layouts for many
+            devices, and comes equipped with an animated mobile navigation
+            menu as well. 
+          `}
+          processText={`JavaScript / SCSS / HTML / Parcel / Figma / Frontend Mentor`}
         />
         <DetailsPreview title="scoot" />
       </DetailsSection>

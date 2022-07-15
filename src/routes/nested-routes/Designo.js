@@ -11,8 +11,14 @@ export default function Designo(props) {
       <DetailsSection>
         <DetailsContext
           title="designo"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          processText="process"
+          text={`
+            A 7 page design built with React 18, and navigated by React Router v6.
+            From extensive CSS-Grid and positioning challenges, to form validation with Formik and Yup, building
+            this site uplifted my confidence organizing multi page layouts.
+          `}
+          processText={`
+            React 18 / React Router v6 / SCSS / Parcel / Formik / Yup / Figma / Frontend Mentor
+          `}
         />
         <DetailsPreview title="designo" />
       </DetailsSection>

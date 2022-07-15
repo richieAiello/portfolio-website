@@ -29,7 +29,15 @@ export default function Carousel(props) {
 
   const [path, setPath] = useState(() => items[0].props.path);
 
+  const handleSlideChanged = () => {
+    const currentImage = document.querySelector('.__active .image');
+    const currentPath = currentImage.getAttribute('path');
+    setPath(currentPath);
+  };
+
   useEffect(() => {
+    handleSlideChanged();
+
     const dots = document.querySelectorAll(
       '.alice-carousel__dots-item'
     );
@@ -44,12 +52,6 @@ export default function Carousel(props) {
       });
     });
   }, []);
-
-  const handleSlideChanged = () => {
-    const currentImage = document.querySelector('.__active .image');
-    const currentPath = currentImage.getAttribute('path');
-    setPath(currentPath);
-  };
 
   const handleLinkHover = e => {
     const activeDot = document.querySelector(

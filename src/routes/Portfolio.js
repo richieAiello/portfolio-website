@@ -12,7 +12,10 @@ export default function Portfolio(props) {
           mod="project"
           heading="Designo"
           text={`
-          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            A 7 page design by Frontend Mentor. Designo is the first website I built with React, 
+            outside of the React course I completed. This project helped me to become comfortable 
+            using React 18 and React Router v6. I also had the pleasure of working with Formik and Yup
+            for form validation with React.
           `}
           route={true}
           path="/details/designo"
@@ -26,7 +29,9 @@ export default function Portfolio(props) {
           secondary={true}
           heading="Photosnap"
           text={`
-          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            A 4 page design by Frontend Mentor. Photosnap provided me with plenty of JavaScript and
+            CSS-Grid challenges. This project taught me the importance of understanding accessiblity 
+            when building responsive tables. 
           `}
           route={true}
           path="/details/photosnap"
@@ -39,7 +44,10 @@ export default function Portfolio(props) {
           mod="project"
           heading="Scoot"
           text={`
-          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            Another 4 page design by Frontend Mentor. Other than providing me experience building multi-page 
+            websites, this project thoroughly allowed me to practice positioning elements with 
+            SCSS. This site is highly responsive, with a clean mobile navigation
+            menu as well.
           `}
           route={true}
           path="/details/scoot"
@@ -53,7 +61,8 @@ export default function Portfolio(props) {
           secondary={true}
           heading="Dine Restaurant"
           text={`
-          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            A 2 page design by Frontend Mentor. A challenging experience at the time, consisting of CSS-Grid, Flexbox,
+            positioned elements, and a reservation form for booking tables.
           `}
           route={true}
           path="/details/dine"
@@ -66,7 +75,8 @@ export default function Portfolio(props) {
           mod="project"
           heading="Creative Agency"
           text={`
-          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            A landing page design by Frontend mentor. At the time, building this website trained me to successfully implement
+            a demanding CSS-Grid layout design, as well as create a native scrolling list with Glider.js. 
           `}
           route={true}
           path="/details/creative"

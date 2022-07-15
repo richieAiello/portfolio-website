@@ -74,7 +74,7 @@ $Error: #f43030;
       &:focus {
         border: 2px solid #fff;
         outline: 3px solid $Blue;
-        background-color: rgba($Greyish-dark-blue, 75%) !important;
+        background-color: rgba($Greyish-dark-blue, 70%) !important;
       }
     }
   }
@@ -441,7 +441,7 @@ $Error: #f43030;
 
   @media (min-width: 1440px) {
     display: grid;
-    grid-template-columns: 550px 450px;
+    grid-template-columns: 500px 500px;
     grid-template-rows: minmax(600px, 100%);
     justify-content: space-between;
     margin-bottom: 7.5rem;
@@ -462,7 +462,7 @@ $Error: #f43030;
   text-align: center;
 
   &__heading {
-    max-width: 350px;
+    max-width: 360px;
     margin-inline: auto;
     margin-bottom: 2.5rem;
   }
@@ -615,7 +615,7 @@ $Error: #f43030;
       font-weight: 700;
       font-size: 0.9375rem;
       color: $Blue;
-      margin-bottom: 1.5rem;
+      margin-block: 1.5rem;
     }
   }
 
@@ -648,9 +648,12 @@ $Error: #f43030;
       grid-template-columns: 281px 339px;
       grid-template-rows:
         auto
-        minmax(74px, auto)
-        minmax(76px, auto)
-        minmax(24px, auto)
+        // minmax(74px, auto)
+        // minmax(76px, auto)
+        // minmax(24px, auto)
+        auto
+        auto
+        auto
         1fr
         auto;
       justify-content: space-between;
@@ -673,12 +676,13 @@ $Error: #f43030;
 
     &__heading {
       grid: row 2;
+      margin-bottom: 0;
     }
 
     &__text {
       grid-row: 2/6;
       grid-column: 2;
-      margin-bottom: 0rem;
+      margin-bottom: 0;
 
       &--secondary {
         grid-row: 3;
@@ -699,6 +703,10 @@ $Error: #f43030;
     &__context {
       display: initial;
       grid-column: 1;
+    }
+
+    &__heading {
+      margin-bottom: 1.5rem;
     }
 
     &__text--secondary {

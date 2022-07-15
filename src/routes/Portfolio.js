@@ -12,10 +12,7 @@ export default function Portfolio(props) {
           mod="project"
           heading="Designo"
           text={`
-            A 7 page design by Frontend Mentor. Designo is the first website I built with React, 
-            outside of the React course I completed. This project helped me to become comfortable 
-            using React 18 and React Router v6. I also had the pleasure of working with Formik and Yup
-            for form validation with React.
+            A 7-page design by Frontend Mentor, Designo is the first website I built with React outside the React course I completed. This project helped me to become comfortable using React 18 and React Router v6. Furthermore, I had the pleasure of working with Formik and Yup for form validation.
           `}
           route={true}
           path="/details/designo"
@@ -29,9 +26,7 @@ export default function Portfolio(props) {
           secondary={true}
           heading="Photosnap"
           text={`
-            A 4 page design by Frontend Mentor. Photosnap provided me with plenty of JavaScript and
-            CSS-Grid challenges. This project taught me the importance of understanding accessiblity 
-            when building responsive tables. 
+            Photosnap is a 4-page design by Frontend Mentor that provided me with plenty of JavaScript and CSS-Grid challenges. This project taught me the importance of understanding accessibility when building responsive tables.
           `}
           route={true}
           path="/details/photosnap"
@@ -44,10 +39,7 @@ export default function Portfolio(props) {
           mod="project"
           heading="Scoot"
           text={`
-            Another 4 page design by Frontend Mentor. Other than providing me experience building multi-page 
-            websites, this project thoroughly allowed me to practice positioning elements with 
-            SCSS. This site is highly responsive, with a clean mobile navigation
-            menu as well.
+            Scoot is a 4-page design by Frontend Mentor. As well as providing me with experience building multi-page websites, this project thoroughly allowed me to practice positioning elements with SCSS. This website is highly responsive and has a clean mobile navigation menu.
           `}
           route={true}
           path="/details/scoot"

@@ -12,9 +12,10 @@ export default function Designo(props) {
         <DetailsContext
           title="designo"
           text={`
-            A 7 page design built with React 18, and navigated by React Router v6.
-            From extensive CSS-Grid and positioning challenges, to form validation with Formik and Yup, building
-            this site uplifted my confidence organizing multi page layouts.
+            Designo is a 7-page website built with React 18 and navigated by React Router v6. 
+            Formik and Yup handle client-side form validation. I was required to have extensive 
+            knowledge of CSS-Grid and positioning elements to build this website. This project 
+            uplifted my confidence in organizing multi-page layouts.
           `}
           processText={`
             React 18 / React Router v6 / SCSS / Parcel / Formik / Yup / Figma / Frontend Mentor

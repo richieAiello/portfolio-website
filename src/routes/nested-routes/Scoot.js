@@ -12,9 +12,7 @@ export default function Scoot(props) {
         <DetailsContext
           title="scoot"
           text={`
-            A 4 page design containing an extensive amount of positioning with SCSS. 
-            This project has highly responsive and visually pleasing layouts, and comes 
-            equipped with an animated mobile navigation menu as well. 
+            Scoot is a 4-page design containing an extensive amount of positioning with SCSS. This project has highly responsive and visually pleasing layouts and comes equipped with an animated mobile navigation menu.
           `}
           processText={`JavaScript / SCSS / HTML / Parcel / Figma / Frontend Mentor`}
         />

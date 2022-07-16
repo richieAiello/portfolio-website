@@ -16,7 +16,7 @@ const linkData = [
   },
   {
     name: 'linkedin',
-    url: '#',
+    url: 'https://www.linkedin.com/in/richard-aiello-574637245/',
     svg: <LinkedIn className="icon" />,
   },
   {

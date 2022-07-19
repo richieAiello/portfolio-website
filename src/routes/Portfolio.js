@@ -12,7 +12,7 @@ export default function Portfolio(props) {
           mod="project"
           heading="Designo"
           text={`
-            A 7-page design by Frontend Mentor, Designo is the first website I built with React outside the React course I completed. This project helped me to become comfortable using React 18 and React Router v6. Furthermore, I had the pleasure of working with Formik and Yup for form validation.
+            A 7-page design by Frontend Mentor. Designo is the first website I built with React outside the React course I completed. This project helped me become more comfortable organizing multi-page layouts.
           `}
           route={true}
           path="/details/designo"

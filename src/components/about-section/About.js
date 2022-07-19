@@ -9,17 +9,10 @@ const About = forwardRef((props, ref) => {
       <Context
         mod="about"
         heading="About Me"
-        text={`Hello, I am Richard Aiello, a junior front-end web developer. I have been 
-          looking for a new role in an exciting company. I live on Long Island, New York, 
-          and I am searching for a remote position, preferably full-time. React has been my preferred
-          front-end tool, using hooks with functional components. I focus on writing
-          accessible JSX and implementing modern ES6 JavaScript. For styling my websites,
-          I have been utilizing SCSS with a strong understanding of the latest CSS practices.
-          I aim to build websites that are not only responsive but cross-browser compatible
-          as well. Presently, I am learning Tailwind CSS with plans to learn Typescript, Redux,
-          and Vite. Another interest of mine is learning Next.js for back-end development.
-          During my free time, I enjoy reading fantasy novels and bouldering outdoors.
-          I would love for you to check out my work!`}
+        text={`	
+          Hello, I am Richard Aiello, a self-taught junior front-end web developer. I currently live on Long Island, New York, and I'm searching for a remote position in an exciting company, ideally full-time.
+          React has been my preferred front-end tool, using hooks with functional components. I focus on writing accessible JSX while implementing modern JavaScript. For styling my websites, I have been using TailwindCSS and SCSS to build projects that are not only responsive but cross-browser compatible. Vite is my favored build tool, with Parcel being a close second. 
+          Presently, I am learning React Redux with plans to learn Typescript after. Learning Next.js for back-end development is another skill that interests me. I enjoy reading fantasy novels, healthy cooking, and bouldering outdoors during my free time. Please feel free to browse my portfolio!`}
         route={true}
         path="/portfolio"
         linkText="View Portfolio"

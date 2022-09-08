@@ -1,14 +1,14 @@
 import { NavLink } from 'react-router-dom';
 
-export default function NavMenu(props) {
+const NavMenu = ({ className, onClick }) => {
   return (
-    <div className={`nav__menu ${props.classes}`}>
+    <div className={`nav__menu ${className}`}>
       <ul className="nav__list">
         <li className="nav__item">
           <NavLink
             to="/"
             className="nav__link link"
-            onClick={props.onClick}
+            onClick={onClick}
           >
             Home
           </NavLink>
@@ -17,7 +17,7 @@ export default function NavMenu(props) {
           <NavLink
             to="/portfolio"
             className="nav__link link"
-            onClick={props.onClick}
+            onClick={onClick}
           >
             Portfolio
           </NavLink>
@@ -26,7 +26,7 @@ export default function NavMenu(props) {
           <NavLink
             to="/contact"
             className="nav__link link"
-            onClick={props.onClick}
+            onClick={onClick}
           >
             Contact Me
           </NavLink>
@@ -34,4 +34,6 @@ export default function NavMenu(props) {
       </ul>
     </div>
   );
-}
+};
+
+export default NavMenu;

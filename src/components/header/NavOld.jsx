@@ -1,6 +1,11 @@
-import { useState, useEffect } from 'react';
 import Logo from 'jsx:../../assets/icons/logo.svg';
-import HamburgerBtn from './HambugerBtn';
+{
+  /* <Logo />; */
+}
+
+import { useState, useEffect } from 'react';
+
+import Hamburger from './Hambuger';
 import NavMenu from './NavMenu';
 import NavShadow from './NavShadow';
 import clsx from 'clsx';
@@ -50,35 +55,32 @@ export default function Nav(props) {
   };
 
   return (
-    <header className="header">
-      <nav className="nav container">
-        <Logo />
-        {/* Hidden with css on larger screens */}
-        <HamburgerBtn
-          disabled={disabled}
-          onClick={handleHamburgerClick}
-          classesTop={clsx({ 'flip-top': menuVisibile })}
-          classesBottom={clsx({ 'flip-bottom': menuVisibile })}
-        />
-        {/* Revealed with css on larger screens */}
-        <NavMenu
-          classes={clsx({
-            hidden: hidden,
-            'slide-in': animateIn,
-            'slide-out': animateOut,
-          })}
-          onClick={handleLinkClick}
-        />
-        {/* Hidden with css on larger screens */}
-        <NavShadow
-          classes={clsx({
-            hidden: hidden,
-            'fade-in': animateIn,
-            'fade-out': animateOut,
-          })}
-          onClick={handleHamburgerClick}
-        />
-      </nav>
-    </header>
+    <nav className="nav container">
+      {/* Hidden with css on larger screens */}
+      <Hamburger
+        disabled={disabled}
+        onClick={handleHamburgerClick}
+        classesTop={clsx({ 'flip-top': menuVisibile })}
+        classesBottom={clsx({ 'flip-bottom': menuVisibile })}
+      />
+      {/* Revealed with css on larger screens */}
+      <NavMenu
+        classes={clsx({
+          hidden: hidden,
+          'slide-in': animateIn,
+          'slide-out': animateOut,
+        })}
+        onClick={handleLinkClick}
+      />
+      {/* Hidden with css on larger screens */}
+      <NavShadow
+        classes={clsx({
+          hidden: hidden,
+          'fade-in': animateIn,
+          'fade-out': animateOut,
+        })}
+        onClick={handleHamburgerClick}
+      />
+    </nav>
   );
 }

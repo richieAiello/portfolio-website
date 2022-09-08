@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function Collaboration(props) {
+const Collaboration = props => {
   return (
     <section className="collaboration container">
       <h3 className="collaboration__heading heading">
@@ -14,4 +14,6 @@ export default function Collaboration(props) {
       </Link>
     </section>
   );
-}
+};
+
+export default Collaboration;

@@ -1,14 +1,14 @@
-import Hero from "../components/hero-section/Hero";
-import About from "../components/about-section/About";
-import Collaboration from "../components/collaboration-section/Collaboration";
-import { useRef } from "react";
+import Hero from '../components/home/Hero';
+import About from '../components/home/About';
+import Collaboration from '../components/shared-components/Collaboration';
+import { useRef } from 'react';
 
-export default function Home(props) {
+const Home = props => {
   const aboutSectionRef = useRef(null);
 
   const handleAboutScroll = () => {
     aboutSectionRef.current.scrollIntoView({
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -19,4 +19,6 @@ export default function Home(props) {
       <Collaboration />
     </main>
   );
-}
+};
+
+export default Home;

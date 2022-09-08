@@ -1,9 +1,9 @@
-import Context from '../shared/Context';
-import IconLink from '../shared/IconLink';
+import Context from '../shared-components/Context';
+import IconLink from '../shared-components/IconLink';
 import email from '../../assets/icons/email.svg';
 import discord from '../../assets/icons/discord.svg';
 
-const ContactContext = props => {
+const ContactInfo = props => {
   return (
     <Context
       mod="contact"
@@ -41,4 +41,4 @@ const ContactContext = props => {
   );
 };
 
-export default ContactContext;
+export default ContactInfo;

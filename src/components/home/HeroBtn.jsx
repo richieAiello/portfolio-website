@@ -1,11 +1,11 @@
-import Icon from "jsx:../../assets/icons/down-arrows.svg";
+import Icon from 'jsx:../../assets/icons/down-arrows.svg';
 
-export default function HeroBtn(props) {
+const HeroBtn = props => {
   return (
     <button
       type="button"
       className="btn btn--hero link slide-up-hero"
-      // aria-label="Scroll to about section."
+      aria-label="Scroll to about section."
       onClick={props.onClick}
     >
       <span className="btn--hero__wrapper">
@@ -14,4 +14,6 @@ export default function HeroBtn(props) {
       <span className="btn--hero__text">About Me</span>
     </button>
   );
-}
+};
+
+export default HeroBtn;

@@ -1,8 +1,8 @@
-import { NavLink } from "react-router-dom";
-import Logo from "jsx:../../assets/icons/logo.svg";
-import IconLink from "../shared/IconLink";
+import { NavLink } from 'react-router-dom';
+import Logo from 'jsx:../../assets/icons/logo.svg';
+import IconLink from '../shared-components/IconLink';
 
-export default function Footer(props) {
+const Footer = props => {
   return (
     <footer className="footer">
       <div className="footer__wrapper container">
@@ -33,4 +33,6 @@ export default function Footer(props) {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

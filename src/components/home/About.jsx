@@ -1,4 +1,4 @@
-import Context from '../shared/Context';
+import Context from '../shared-components/Context';
 import image from '../../assets/homepage/desktop/profile-photo.jpeg';
 import { forwardRef } from 'react';
 

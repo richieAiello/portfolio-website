@@ -1,11 +1,11 @@
-import Context from '../shared-components/Context';
+import Info from '../shared-components/Info';
 import IconLink from '../shared-components/IconLink';
 import email from '../../assets/icons/email.svg';
 import discord from '../../assets/icons/discord.svg';
 
 const ContactInfo = props => {
   return (
-    <Context
+    <Info
       mod="contact"
       heading="Get In Touch"
       text={`
@@ -37,7 +37,7 @@ const ContactInfo = props => {
         <img src={discord} alt="" className="image" /> :
         <span className="contact__span">richieAiello#3097</span>
       </address>
-    </Context>
+    </Info>
   );
 };
 

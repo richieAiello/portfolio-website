@@ -3,11 +3,11 @@ import HeroWrapper from './HeroWrapper';
 import HeroHeading from './HeroHeading';
 import HeroBtn from './HeroBtn';
 
-export default function Hero(props) {
+const Hero = props => {
   return (
-    <section className="hero">
+    <div className="hero">
+      <HeroImage />
       <div className="container">
-        <HeroImage />
         <HeroWrapper>
           <HeroHeading>
             Richard Aiello Front-End Web Developer
@@ -15,6 +15,8 @@ export default function Hero(props) {
           <HeroBtn onClick={props.onClick} />
         </HeroWrapper>
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default Hero;

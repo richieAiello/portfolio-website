@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import GitHub from 'jsx:../../assets/icons/github.svg';
 
-export default function Context({
+const Info = ({
   mod,
   secondary,
   heading,
@@ -15,7 +15,7 @@ export default function Context({
   repoPath,
   path,
   children,
-}) {
+}) => {
   return (
     <section
       className={`main__context ${mod}__context${
@@ -54,4 +54,6 @@ export default function Context({
       {children}
     </section>
   );
-}
+};
+
+export default Info;

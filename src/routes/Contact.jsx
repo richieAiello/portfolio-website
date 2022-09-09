@@ -1,9 +1,11 @@
-import ContactContext from '../components/contact-section/ContactContext';
+import ContactInfo from '../components/contact/ContactInfo';
 
-export default function Contact(props) {
+const Contact = props => {
   return (
     <main className="main main--contact container">
-      <ContactContext />
+      <ContactInfo />
     </main>
   );
-}
+};
+
+export default Contact;

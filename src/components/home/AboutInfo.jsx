@@ -1,12 +1,25 @@
-import Context from '../shared-components/Context';
+import Info from '../shared-components/Info';
 import image from '../../assets/homepage/desktop/profile-photo.jpeg';
 import { forwardRef } from 'react';
+import { motion } from 'framer-motion';
 
-const About = forwardRef((props, ref) => {
+const AboutInfo = forwardRef((props, ref) => {
   return (
-    <div className="about container" ref={ref}>
+    <motion.div
+      className="about container"
+      ref={ref}
+      initial={{
+        opacity: 0,
+        // scale: 0.5,
+      }}
+      whileInView={{
+        opacity: 1,
+        // scale: 1,
+      }}
+      transition={{ duration: 0.8 }}
+    >
       <img src={image} alt="" className="image image--about" />
-      <Context
+      <Info
         mod="about"
         heading="About Me"
         text={`	
@@ -17,8 +30,8 @@ const About = forwardRef((props, ref) => {
         path="/portfolio"
         linkText="View Portfolio"
       />
-    </div>
+    </motion.div>
   );
 });
 
-export default About;
+export default AboutInfo;

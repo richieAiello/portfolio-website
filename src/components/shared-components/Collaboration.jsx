@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Collaboration = props => {
   return (
-    <section className="collaboration container">
+    <section className="collaboration">
       <h3 className="collaboration__heading heading">
         Interested in hiring me, or collaborating?
       </h3>

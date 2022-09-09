@@ -1,11 +1,9 @@
 import PortfolioGrid from '../components/portfolio/PortfolioGrid';
-import Collaboration from '../components/shared-components/Collaboration';
 
 const Portfolio = props => {
   return (
-    <main className="main container">
+    <main className="main main--portfolio container">
       <PortfolioGrid />
-      <Collaboration />
     </main>
   );
 };

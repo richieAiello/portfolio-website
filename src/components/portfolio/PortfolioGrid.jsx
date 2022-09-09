@@ -16,15 +16,14 @@ const PortfolioGrid = props => {
   // }, []);
 
   // temporary data
-  const data = [0, 1, 2, 3];
+  const data = [0, 1, 2, 3, 4, 5];
 
   // Varients object for framer-motion matching child component in PortfolioCard.jsx
-  const container = {
-    hidden: { opacity: 0 },
+  const variantsParent = {
+    hidden: {},
     show: {
-      opacity: 1,
       transition: {
-        staggerChildren: 0.3,
+        staggerChildren: 0.25,
       },
     },
   };
@@ -45,12 +44,12 @@ const PortfolioGrid = props => {
     // </>
     <motion.ul
       className="portfolio"
-      variants={container}
+      variants={variantsParent}
       initial="hidden"
       animate="show"
     >
       {data.map(item => {
-        return <PortfolioCard key={item.index} />;
+        return <PortfolioCard key={data[item]} />;
       })}
     </motion.ul>
   );

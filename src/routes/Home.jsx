@@ -13,7 +13,7 @@ const Home = props => {
   };
 
   return (
-    <main className="main">
+    <main className="main container">
       <Hero onClick={handleAboutScroll} />
       <AboutInfo ref={aboutSectionRef} />
       <Collaboration />

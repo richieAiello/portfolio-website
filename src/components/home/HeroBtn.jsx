@@ -4,7 +4,7 @@ const HeroBtn = props => {
   return (
     <button
       type="button"
-      className="btn btn--hero link slide-up-hero"
+      className="btn btn--hero link"
       aria-label="Scroll to about section."
       onClick={props.onClick}
     >

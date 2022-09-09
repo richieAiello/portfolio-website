@@ -7,14 +7,12 @@ const Hero = props => {
   return (
     <div className="hero">
       <HeroImage />
-      <div className="container">
-        <HeroWrapper>
-          <HeroHeading>
-            Richard Aiello Front-End Web Developer
-          </HeroHeading>
-          <HeroBtn onClick={props.onClick} />
-        </HeroWrapper>
-      </div>
+      <HeroWrapper>
+        <HeroHeading>
+          Richard Aiello Front-End Web Developer
+        </HeroHeading>
+        <HeroBtn onClick={props.onClick} />
+      </HeroWrapper>
     </div>
   );
 };

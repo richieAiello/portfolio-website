@@ -10,13 +10,13 @@ const AboutInfo = forwardRef((props, ref) => {
       ref={ref}
       initial={{
         opacity: 0,
-        // scale: 0.5,
+        scale: 0.5,
       }}
       whileInView={{
         opacity: 1,
-        // scale: 1,
+        scale: 1,
       }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.5 }}
     >
       <img src={image} alt="" className="image image--about" />
       <Info

@@ -51,6 +51,7 @@ $Error: #f43030;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .body {
@@ -335,11 +336,9 @@ $Error: #f43030;
 // hero section
 .hero {
   margin-bottom: 4rem;
-  min-height: calc(100vh - 6.5rem);
 
   &__wrapper {
     padding-top: 1.5rem;
-    max-width: 275px;
   }
 
   &__heading {
@@ -348,12 +347,6 @@ $Error: #f43030;
 
   @media (min-width: 768px) {
     &__wrapper {
-      padding: 1rem 0;
-      position: absolute;
-      height: max-content;
-      top: 0;
-      bottom: 0;
-      margin-block: auto;
     }
   }
 
@@ -361,8 +354,6 @@ $Error: #f43030;
     margin-bottom: 6rem;
 
     &__wrapper {
-      padding-top: 1.5rem;
-      max-width: 350px;
     }
 
     &__heading {
@@ -431,6 +422,7 @@ $Error: #f43030;
 
 // collaboration section
 .collaboration {
+  margin-top: auto;
   margin-bottom: 5rem;
   text-align: center;
 
@@ -444,7 +436,6 @@ $Error: #f43030;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 6rem;
     text-align: left;
 
     &::before {
@@ -471,16 +462,18 @@ $Error: #f43030;
 
 // section portfolio
 .portfolio {
-  padding: 5rem 0;
+  min-height: calc(100vh - 10rem);
+  padding: 4rem 0;
   display: grid;
-  justify-content: center;
+  align-content: center;
+  justify-content: space-around;
   row-gap: 2rem;
 
   &__card {
     height: 10rem;
     width: 10rem;
-    border-radius: 24px;
-    background-color: rgb(75, 30, 75);
+    border-radius: 1.25rem;
+    background-color: #5b5a66;
     color: white;
     display: flex;
     flex-direction: column;
@@ -496,6 +489,9 @@ $Error: #f43030;
   }
 
   @media (min-width: 1440px) {
+    grid-template-columns: repeat(3, auto);
+    row-gap: 3.25rem;
+
     &__card {
       height: 20rem;
       width: 20rem;
@@ -697,7 +693,10 @@ $Error: #f43030;
 
   @media (min-width: 768px) {
     text-align: left;
-    padding: 1.5rem 0;
+    padding: 0;
+    height: 5rem;
+    display: flex;
+    align-items: center;
 
     &__wrapper {
       display: flex;
@@ -848,11 +847,7 @@ $Error: #f43030;
   vertical-align: middle;
 
   &--hero {
-    height: 35vh;
-    max-height: 350px;
-    width: 100vw;
-    object-position: top -12px right 0px;
-    opacity: 10%;
+    width: 100%;
   }
 
   &--about {
@@ -863,16 +858,11 @@ $Error: #f43030;
 
   @media (min-width: 600px) {
     &--hero {
-      height: 45vh;
-      object-position: top -20px right 0px;
     }
   }
 
   @media (min-width: 768px) {
     &--hero {
-      max-height: unset;
-      height: 650px;
-      position: absolute;
     }
 
     &--about {
@@ -883,8 +873,6 @@ $Error: #f43030;
 
   @media (min-width: 1440px) {
     &--hero {
-      height: calc(100vh - 5rem);
-      object-position: top -75px right 0px;
     }
 
     &--about {
@@ -898,39 +886,6 @@ $Error: #f43030;
 /**********************************
   ANIMATIONS
 **********************************/
-@keyframes slide-up-hero {
-  0% {
-    opacity: 0%;
-    transform: translateY(100vh);
-  }
-  100% {
-    opacity: 100%;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-down-hero {
-  0% {
-    opacity: 0%;
-    transform: translateY(-100vh);
-  }
-  100% {
-    opacity: 100%;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-in-hero {
-  0% {
-    opacity: 0%;
-    transform: translateX(-100vw);
-  }
-  100% {
-    opacity: 100%;
-    transform: translateX(0);
-  }
-}
-
 @keyframes slide-in {
   0% {
     transform: translateX(-100vw);
@@ -958,15 +913,6 @@ $Error: #f43030;
   }
 }
 
-@keyframes fade-in-hero {
-  0% {
-    background-color: rgba(#fff, 0);
-  }
-  100% {
-    background-color: rgba(#fff, 100);
-  }
-}
-
 @keyframes fade-out {
   0% {
     opacity: 100%;
@@ -974,18 +920,6 @@ $Error: #f43030;
   100% {
     opacity: 0%;
   }
-}
-
-.slide-up-hero {
-  animation: slide-up-hero 500ms 500ms backwards;
-}
-
-.slide-down-hero {
-  animation: slide-down-hero 1s forwards;
-}
-
-.slide-in-hero {
-  animation: slide-in-hero 500ms 1s backwards;
 }
 
 .slide-in {
@@ -1002,12 +936,6 @@ $Error: #f43030;
 
 .fade-out {
   animation: fade-out 400ms forwards;
-}
-
-@media (min-width: 768px) {
-  .fade-in-hero {
-    animation: fade-in-hero 400ms 1s backwards;
-  }
 }
 
 // /**********************************

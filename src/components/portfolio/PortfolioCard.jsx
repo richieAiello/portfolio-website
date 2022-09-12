@@ -17,13 +17,11 @@ const PortfolioCard = ({ ...props }) => {
     hidden: {
       scale: 1.5,
       opacity: 0,
-      rotate: 45,
       y: 500,
     },
     show: {
       scale: 1,
       opacity: 1,
-      rotate: 0,
       y: 0,
     },
   };

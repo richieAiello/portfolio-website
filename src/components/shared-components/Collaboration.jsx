@@ -4,7 +4,7 @@ const Collaboration = props => {
   return (
     <section className="collaboration">
       <h3 className="collaboration__heading heading">
-        Interested in hiring me, or collaborating?
+        Interested in communicating with me?
       </h3>
       <Link
         to="/contact"

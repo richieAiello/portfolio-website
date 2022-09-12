@@ -23,7 +23,7 @@ const PortfolioGrid = props => {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: 0.25,
+        staggerChildren: 0.3,
       },
     },
   };

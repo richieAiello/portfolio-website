@@ -1,6 +1,5 @@
 import Hero from '../components/home/Hero';
 import AboutInfo from '../components/home/AboutInfo';
-import Collaboration from '../components/shared-components/Collaboration';
 import { useRef } from 'react';
 
 const Home = props => {
@@ -13,10 +12,9 @@ const Home = props => {
   };
 
   return (
-    <main className="main container">
+    <main className="main">
       <Hero onClick={handleAboutScroll} />
       <AboutInfo ref={aboutSectionRef} />
-      <Collaboration />
     </main>
   );
 };

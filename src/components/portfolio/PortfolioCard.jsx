@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 // Side contains short description on projects.
 // Links get absolutely positioned with a z-index high enough to be shown and clickable on both sides.
 
-const PortfolioCard = ({ ...props }) => {
+const PortfolioCard = ({ heading, image }) => {
   const [toggle, setToggle] = useState(false);
 
   // Varients object for framer-motion matching parent container in PortfolioGrid.jsx
@@ -33,8 +33,10 @@ const PortfolioCard = ({ ...props }) => {
       tabIndex="0"
     >
       {/* Render side 2 of card when toggle is true. */}
-      <p>Project Name</p>
-      <p>Some information!</p>
+      <img src={image} alt="" className="image image--portfolio" />
+      <div className="portfolio__wrapper">
+        <h1 className="portfolio__heading">{heading}</h1>
+      </div>
     </motion.li>
   );
 };

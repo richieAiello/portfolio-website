@@ -28,7 +28,7 @@ const NavMenu = ({ className, onClick }) => {
             className="nav__link link"
             onClick={onClick}
           >
-            Contact Me
+            Contact
           </NavLink>
         </li>
       </ul>

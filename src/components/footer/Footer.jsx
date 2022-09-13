@@ -20,7 +20,7 @@ const Footer = props => {
           </li>
           <li className="footer__item">
             <NavLink to="/contact" className="footer__link link">
-              Contact Me
+              Contact
             </NavLink>
           </li>
         </ul>

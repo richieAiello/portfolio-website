@@ -35,7 +35,12 @@ const PortfolioCard = ({ heading, image }) => {
       {/* Render side 2 of card when toggle is true. */}
       <img src={image} alt="" className="image image--portfolio" />
       <div className="portfolio__wrapper">
-        <h1 className="portfolio__heading">{heading}</h1>
+        {!toggle ? (
+          <h1 className="portfolio__heading">{heading}</h1>
+        ) : (
+          <p className="portfolio__text"></p>
+        )}
+        <div className="portfolio__wrapper--secondary"></div>
       </div>
     </motion.li>
   );

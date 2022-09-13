@@ -502,6 +502,7 @@ $Error: #f43030;
 
 // section portfolio
 .portfolio {
+  list-style: none;
   min-height: calc(100vh - 10rem);
   padding: 4rem 0;
   display: grid;
@@ -511,21 +512,40 @@ $Error: #f43030;
 
   &__card {
     justify-self: center;
-    height: 15rem;
-    width: min(100%, 15rem);
-    border-radius: 1rem;
-    background-color: rgba($Greyish-dark-blue, 1);
-    color: white;
-    border: 1px solid $Blue;
+    height: 17.5rem;
+    width: min(100%, 17.5rem);
+    border-radius: 0rem;
+    background-color: #fff;
+    border: 0.25rem solid $Greyish-dark-blue;
+
+    &--secondary {
+    }
+  }
+
+  &__wrapper {
+    padding: 1rem 0;
+    text-align: center;
+    &--secondary {
+    }
+  }
+
+  &__heading {
+    font-family: $Font-Ibarra;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: $Greyish-dark-blue;
+  }
+
+  &__text {
   }
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, auto);
-    row-gap: 2rem;
+    row-gap: 2.95rem;
 
     &__card {
-      height: 17.5rem;
-      width: 17.5rem;
+      height: 18.5rem;
+      width: 18.5rem;
     }
   }
 
@@ -594,6 +614,7 @@ $Error: #f43030;
       }
     }
   }
+
   @media (min-width: 768px) {
     &__context {
       margin-bottom: 0;
@@ -911,8 +932,8 @@ $Error: #f43030;
   &--portfolio {
     width: 100%;
     min-height: 50%;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    // border-top-left-radius: 1rem;
+    // border-top-right-radius: 1rem;
   }
 
   @media (min-width: 768px) {

@@ -15,7 +15,7 @@ const data = [
   },
   {
     id: 2,
-    heading: 'PhotoSnap',
+    heading: 'Photosnap',
     site: 'https://photosnap-website-richieaiello.netlify.app/',
     repo: 'https://github.com/richieAiello/photosnap-website',
     image: photosnap,

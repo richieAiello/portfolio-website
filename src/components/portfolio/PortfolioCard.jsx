@@ -1,15 +1,11 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import clsx from 'clsx';
+import Site from 'jsx:../../assets/icons/site.svg';
+import GitHub from 'jsx:../../assets/icons/github.svg';
+import Info from 'jsx:../../assets/icons/info.svg';
 
-// Each Card needs a button that toggles state to reaveal information about the project
-// Use the MyTeam sites about page for reference. Same code as the cards.
-// Each card needs a link to it's live site and repository
-// Side 1 of card contains screenshot and name of project with both links
-// Side 2 contains either an overlay with a dark opaque background or solid background
-// Side contains short description on projects.
-// Links get absolutely positioned with a z-index high enough to be shown and clickable on both sides.
-
-const PortfolioCard = ({ heading, image }) => {
+const PortfolioCard = ({ heading, image, site, repo, text }) => {
   const [toggle, setToggle] = useState(false);
 
   // Varients object for framer-motion matching parent container in PortfolioGrid.jsx
@@ -32,16 +28,61 @@ const PortfolioCard = ({ heading, image }) => {
       variants={variantsChild}
       tabIndex="0"
     >
-      {/* Render side 2 of card when toggle is true. */}
       <img src={image} alt="" className="image image--portfolio" />
       <div className="portfolio__wrapper">
-        {!toggle ? (
-          <h1 className="portfolio__heading">{heading}</h1>
-        ) : (
-          <p className="portfolio__text"></p>
-        )}
-        <div className="portfolio__wrapper--secondary"></div>
+        {!toggle && <h1 className="portfolio__heading">{heading}</h1>}
+        <div className="portfolio__wrapper--secondary">
+          <a
+            href={site}
+            target="_blank"
+            aria-label="View live site."
+            className="portfolio__link link"
+          >
+            <Site
+              className={clsx({
+                portfolio__icon: !toggle,
+                'portfolio__icon--secondary': toggle,
+              })}
+            />
+          </a>
+          <a
+            href={repo}
+            target="_blank"
+            aria-label="View site repository."
+            className="portfolio__link link"
+          >
+            <GitHub
+              className={clsx({
+                portfolio__icon: !toggle,
+                'portfolio__icon--secondary': toggle,
+              })}
+            />
+          </a>
+          <button
+            type="button"
+            className="portfolio__link link"
+            onClick={() => setToggle(!toggle)}
+            aria-label="Toggle site information."
+          >
+            <Info
+              className={clsx({
+                portfolio__icon: !toggle,
+                'portfolio__icon--secondary': toggle,
+              })}
+            />
+          </button>
+        </div>
       </div>
+      {toggle && (
+        <div
+          className={`portfolio__card--secondary ${clsx({
+            'fade-in': toggle,
+          })}`}
+        >
+          <h1 className="portfolio__heading">{heading}</h1>
+          <p className="portfolio__text">{text}</p>
+        </div>
+      )}
     </motion.li>
   );
 };

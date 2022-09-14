@@ -456,50 +456,6 @@ $Error: #f43030;
   }
 }
 
-// collaboration section
-.collaboration {
-  margin-bottom: 5rem;
-  text-align: center;
-
-  &__heading {
-    max-width: 12ch;
-    margin-inline: auto;
-    margin-bottom: 2.5rem;
-  }
-
-  @media (min-width: 768px) {
-    margin-bottom: 6rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
-
-    &::before {
-      content: '';
-      display: block;
-      height: 1px;
-      width: 180px;
-      background-color: rgba($Greyish-dark-blue, 15%);
-      order: 2;
-    }
-
-    &__heading {
-      max-width: 10ch;
-      margin-inline: unset;
-      margin-right: 0.5rem;
-      margin-bottom: 0;
-    }
-  }
-
-  @media (min-width: 1440px) {
-    margin-bottom: 7.5rem;
-
-    &::before {
-      width: 500px;
-    }
-  }
-}
-
 // section portfolio
 .portfolio {
   list-style: none;
@@ -510,40 +466,111 @@ $Error: #f43030;
   justify-content: space-around;
   row-gap: 2rem;
 
-  &__card {
-    justify-self: center;
+  &__card,
+  &__card--secondary {
     height: 17.5rem;
+    border: 0.2rem solid $Greyish-dark-blue;
+  }
+
+  &__card {
     width: min(100%, 17.5rem);
-    border-radius: 0rem;
-    background-color: #fff;
-    border: 0.25rem solid $Greyish-dark-blue;
+    position: relative;
+    justify-self: center;
+    background-color: rgba($Greyish-dark-blue, 0.015);
+    color: $Greyish-dark-blue;
 
     &--secondary {
+      width: calc(100% + 0.4rem);
+      position: absolute;
+      top: -0.2rem;
+      left: -0.2rem;
+      background-color: rgba($Greyish-dark-blue, 0.85);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
     }
   }
 
   &__wrapper {
     padding: 1rem 0;
     text-align: center;
+
     &--secondary {
+      position: absolute;
+      bottom: 1rem;
+      left: 0;
+      right: 0;
+      margin-inline: auto;
+      display: grid;
+      grid-auto-flow: column;
+      width: max-content;
+      column-gap: 1rem;
+      z-index: 1;
+      // background-color: #97cec1;
     }
   }
 
   &__heading {
     font-family: $Font-Ibarra;
     font-weight: 500;
+    font-size: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
     text-transform: capitalize;
-    color: $Greyish-dark-blue;
   }
 
   &__text {
+  }
+
+  &__link {
+    background-color: initial;
+    border: initial;
+    cursor: pointer;
+    height: max-content;
+
+    &:last-child {
+      align-self: center;
+    }
+
+    &:hover,
+    &:focus {
+      .portfolio__icon path {
+        fill: $Blue;
+      }
+
+      .portfolio__icon--secondary path {
+        fill: $Cyan;
+      }
+    }
+  }
+
+  &__icon,
+  &__icon--secondary {
+    vertical-align: middle;
+
+    & path {
+      transition: all 300ms;
+    }
+  }
+
+  &__icon {
+    & path {
+      fill: $Greyish-dark-blue;
+    }
+  }
+
+  &__icon--secondary {
+    & path {
+      fill: #fff;
+    }
   }
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, auto);
     row-gap: 2.95rem;
 
-    &__card {
+    &__card,
+    &__card--secondary {
       height: 18.5rem;
       width: 18.5rem;
     }
@@ -553,7 +580,8 @@ $Error: #f43030;
     grid-template-columns: repeat(3, auto);
     row-gap: 3.25rem;
 
-    &__card {
+    &__card,
+    &__card--secondary {
       height: 20rem;
       width: 20rem;
     }

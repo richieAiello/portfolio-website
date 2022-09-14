@@ -32,8 +32,11 @@ const PortfolioGrid = props => {
         return (
           <PortfolioCard
             key={item.id}
-            heading={item.heading}
             image={item.image}
+            heading={item.heading}
+            text={item.text}
+            site={item.site}
+            repo={item.repo}
           />
         );
       })}

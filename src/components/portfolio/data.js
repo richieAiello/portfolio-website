@@ -11,7 +11,7 @@ const data = [
     site: 'https://audiophile-ecommerce-richieaiello.netlify.app/',
     repo: 'https://github.com/richieAiello/audiophile-website',
     image: audiophile,
-    text: 'Some text about the audiophile website',
+    text: 'E-commerce site built with React, utlizing context and useReducer to manage shopping cart state. Stores and retrieves data using local storage.',
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const data = [
     site: 'https://photosnap-website-richieaiello.netlify.app/',
     repo: 'https://github.com/richieAiello/photosnap-website',
     image: photosnap,
-    text: 'Some text about the audiophile website',
+    text: '4-page website built with React. Contains a gallery of interactive story slides. An accessible table element compares features of pricing plans. ',
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const data = [
     site: 'https://myteam-richieaiello.netlify.app/',
     repo: 'https://github.com/richieAiello/myteam-website',
     image: myteam,
-    text: 'Some text about the audiophile website',
+    text: '3-page React website. Applys useState to toggle the display of cards on the about page. The contact form is validated and styled by Formik and Yup.',
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const data = [
     site: 'https://arch-studio-richieaiello.netlify.app/',
     repo: 'https://github.com/richieAiello/arch-studio-website',
     image: archstudio,
-    text: 'Some text about the audiophile website',
+    text: 'Leaflet.js displays interactive maps pinpointing locations of studios. The contact form is validated and styled by Formik and Yup.',
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ const data = [
     site: 'https://designo-website-richieaiello.netlify.app/',
     repo: 'https://github.com/richieAiello/designo-website',
     image: designo,
-    text: 'Some text about the audiophile website',
+    text: 'The first project I coded with React. Uses functional components and the BEM naming convention to manage and style a multi-page layout.',
   },
 ];
 

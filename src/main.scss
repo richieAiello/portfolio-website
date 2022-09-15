@@ -506,7 +506,6 @@ $Error: #f43030;
       width: max-content;
       column-gap: 1rem;
       z-index: 1;
-      // background-color: #97cec1;
     }
   }
 
@@ -520,6 +519,8 @@ $Error: #f43030;
   }
 
   &__text {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 
   &__link {

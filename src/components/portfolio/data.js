@@ -28,7 +28,7 @@ const data = [
     site: 'https://countries-richieaiello.netlify.app/',
     repo: 'https://github.com/richieAiello/countries-api-website',
     image: countries,
-    text: '3-page React website. Applys useState to toggle the display of cards on the about page. The contact form is validated and styled by Formik and Yup.',
+    text: "Retrieves and renders data from the REST countries API. Implements Tailwind's dark mode feature to toggle between light and dark styling.",
   },
   {
     id: 4,

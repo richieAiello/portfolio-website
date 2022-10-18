@@ -52,7 +52,7 @@ const data = [
     site: 'https://designo-website-richieaiello.netlify.app/',
     repo: 'https://github.com/richieAiello/designo-website',
     image: designo,
-    text: 'The first project I coded with React. Uses functional components and the BEM naming convention to manage and style a multi-page layout.',
+    text: '7-page website that uses functional components and SCSS with the BEM naming convention to manage and style a multi-page layout. Built with Parcel. ',
   },
 ];
 

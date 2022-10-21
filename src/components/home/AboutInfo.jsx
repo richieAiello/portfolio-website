@@ -25,20 +25,21 @@ const AboutInfo = forwardRef((props, ref) => {
         </h2>
         <p className="about__text">
           I am Richard Aiello, a self-taught front-end web developer
-          with over a year of experience. I currently live on Long
+          with over a year of experience. I currently live in Long
           Island, New York, and I'm searching for a remote position in
           a welcoming company, ideally full-time. React has been my
           preferred front-end tool, using hooks with functional
           components. I focus on writing accessible JSX while
-          implementing modern JavaScript. For styling websites, I use
-          a mix of TailwindCSS and CSS3 while applying the BEM naming
-          convention. I also have experience styling with SCSS.
-          Presently, I am learning React Redux with plans to learn
-          Typescript after! I thoroughly enjoy reading fantasy novels,
-          healthy cooking, and bouldering outdoors during my free
-          time. Maintaining a healthy lifestyle, both physically and
-          mentally, keeps me opening my code editor with a smile!
-          Please feel free to browse my portfolio and contact me!
+          implementing modern JavaScript practices. For styling
+          websites, I use a mix of TailwindCSS and CSS. I also have
+          experience styling with SCSS and the BEM naming convention.
+        </p>
+        <p className="about__text">
+          I thoroughly enjoy reading fantasy novels, healthy cooking,
+          and bouldering outdoors during my free time. Maintaining a
+          healthy lifestyle, both physically and mentally, keeps me
+          opening my code editor with a smile! Please feel free to
+          browse my portfolio and contact me!
         </p>
         <div className="about__wrapper">
           <Link

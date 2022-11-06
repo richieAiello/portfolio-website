@@ -65,6 +65,11 @@ $Error: #f43030;
     font-size: 1.125rem;
     line-height: 2rem;
   }
+
+  @media (min-width: 2000px) {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
 }
 
 .container {
@@ -77,6 +82,10 @@ $Error: #f43030;
 
   @media (min-width: 1440px) {
     width: 1110px;
+  }
+
+  @media (min-width: 2000px) {
+    width: 1440px;
   }
 }
 
@@ -136,6 +145,14 @@ $Error: #f43030;
     font-size: 3.125rem;
     line-height: 3.125rem;
     letter-spacing: -0.45px;
+  }
+
+  @media (min-width: 2000px) {
+    &--secondary {
+      font-size: 3.125rem;
+      line-height: 3.125rem;
+      letter-spacing: -0.45px;
+    }
   }
 }
 
@@ -336,11 +353,14 @@ $Error: #f43030;
 // hero section
 .hero {
   min-height: calc(100vh - 5rem);
-  margin-bottom: 4rem;
+  // background-color: #0071bc;
+  margin-bottom: 1rem;
 
   &__wrapper {
+    // background-color: rgba(#000, 50%);
     padding-top: 1.5rem;
-    animation: fade-in 400ms 1s backwards;
+    animation: fade-in 400ms 0.5s backwards;
+    padding-bottom: 1rem;
   }
 
   &__heading {
@@ -353,14 +373,14 @@ $Error: #f43030;
     margin-bottom: 5rem;
 
     &__wrapper {
-      position: absolute;
       width: 768px;
+      height: 650px;
+      position: absolute;
       top: 0;
       left: 0;
       right: 0;
       margin-inline: auto;
       padding: 0;
-      height: 650px;
 
       &--secondary {
         height: 100%;
@@ -375,19 +395,35 @@ $Error: #f43030;
   }
 
   @media (min-width: 1440px) {
-    margin-bottom: 6rem;
+    // margin-bottom: 6rem;
+    margin-bottom: 0;
 
     &__wrapper {
       width: 1200px;
-      height: min(100vh - 5rem, 1050px);
+      height: 100%;
+    }
+  }
+
+  @media (min-width: 2000px) {
+    &__wrapper {
+      width: 1500px;
+      height: 100%;
     }
   }
 }
 
 // about section
 .about {
-  margin-bottom: 5rem;
   scroll-margin-top: 6.5rem;
+  &__wrapper {
+    margin-bottom: 5rem;
+
+    &--secondary {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3.125rem;
+    }
+  }
 
   &__context {
     display: flex;
@@ -408,21 +444,20 @@ $Error: #f43030;
     margin-bottom: 1.5rem;
   }
 
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3.125rem;
-  }
-
   @media (min-width: 460px) {
-    &__wrapper {
+    &__wrapper--secondary {
       flex-direction: row;
     }
   }
 
   @media (min-width: 768px) {
-    margin-bottom: 6rem;
     scroll-margin-top: 3rem;
+    // margin-bottom: 6rem;
+    &__wrapper {
+      &--secondary {
+        margin-bottom: 3rem;
+      }
+    }
 
     &__context {
       &::before {
@@ -433,25 +468,39 @@ $Error: #f43030;
         margin-top: auto;
       }
     }
-
-    &__wrapper {
-      margin-bottom: 3rem;
-    }
   }
 
   @media (min-width: 1440px) {
-    display: grid;
-    grid-template-columns: 500px 500px;
-    grid-template-rows: minmax(600px, 100%);
-    justify-content: space-between;
-    margin-bottom: 7.5rem;
-    scroll-margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    scroll-margin-top: 0;
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 500px 500px;
+      grid-template-rows: minmax(600px, 100%);
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
 
     &__context {
       &::before {
         margin-block: unset;
         margin-bottom: 2.5rem;
       }
+    }
+  }
+
+  @media (min-width: 2000px) {
+    &__wrapper {
+      grid-template-columns: 750px 600px;
+      grid-template-rows: max-content;
+    }
+
+    &__heading,
+    &__text {
+      margin-bottom: 2.5rem;
     }
   }
 }
@@ -948,9 +997,9 @@ $Error: #f43030;
   vertical-align: middle;
 
   &--hero {
-    height: 375px;
+    height: 300px;
     width: 100vw;
-    object-position: 85% 10%;
+    object-position: 85% 20%;
   }
 
   &--about {
@@ -962,8 +1011,6 @@ $Error: #f43030;
   &--portfolio {
     width: 100%;
     min-height: 50%;
-    // border-top-left-radius: 1rem;
-    // border-top-right-radius: 1rem;
   }
 
   @media (min-width: 768px) {
@@ -980,7 +1027,7 @@ $Error: #f43030;
 
   @media (min-width: 1440px) {
     &--hero {
-      height: min(100vh - 5rem, 1050px);
+      height: calc(100vh - 5rem);
     }
 
     &--about {

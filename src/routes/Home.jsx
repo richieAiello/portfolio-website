@@ -6,9 +6,7 @@ const Home = props => {
   const aboutSectionRef = useRef(null);
 
   const handleAboutScroll = () => {
-    aboutSectionRef.current.scrollIntoView({
-      behavior: 'smooth',
-    });
+    aboutSectionRef.current.scrollIntoView();
   };
 
   return (

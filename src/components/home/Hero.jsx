@@ -8,9 +8,7 @@ const Hero = props => {
     <div className="hero">
       <HeroImage />
       <HeroWrapper>
-        <HeroHeading>
-          Richard Aiello Front-End Web Developer
-        </HeroHeading>
+        <HeroHeading />
         <HeroBtn onClick={props.onClick} />
       </HeroWrapper>
     </div>

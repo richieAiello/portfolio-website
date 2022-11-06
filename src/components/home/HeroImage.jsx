@@ -18,7 +18,7 @@ export default function HeroImage(props) {
           opacity: 1,
         }}
         transition={{
-          duration: 1,
+          duration: 0.75,
         }}
         src={mobile}
         alt=""

@@ -767,6 +767,12 @@ $Error: #f43030;
       margin-right: 1.5rem;
     }
   }
+
+  @media (min-width: 2000px) {
+    &__context {
+      grid-template-columns: 850px 450px;
+    }
+  }
 }
 
 /*********************************

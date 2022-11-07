@@ -60,7 +60,7 @@ const PortfolioCard = ({ heading, image, site, repo, text }) => {
           </a>
           <button
             type="button"
-            className="portfolio__link link"
+            className="portfolio__link link btn"
             onClick={() => setToggle(!toggle)}
             aria-label="Toggle site information."
           >

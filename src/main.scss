@@ -574,14 +574,7 @@ $Error: #f43030;
   }
 
   &__link {
-    background-color: initial;
-    border: initial;
-    cursor: pointer;
-    height: max-content;
-
-    &:last-child {
-      align-self: center;
-    }
+    display: inline-flex;
 
     &:hover,
     &:focus {
@@ -597,8 +590,6 @@ $Error: #f43030;
 
   &__icon,
   &__icon--secondary {
-    vertical-align: middle;
-
     & path {
       transition: all 300ms;
     }
@@ -635,6 +626,21 @@ $Error: #f43030;
     &__card--secondary {
       height: 20rem;
       width: 20rem;
+    }
+  }
+
+  @media (min-width: 2000px) {
+    row-gap: 5rem;
+
+    &__wrapper--secondary {
+      bottom: 3rem;
+      column-gap: 1.25rem;
+    }
+
+    &__card,
+    &__card--secondary {
+      height: 24rem;
+      width: 24rem;
     }
   }
 }

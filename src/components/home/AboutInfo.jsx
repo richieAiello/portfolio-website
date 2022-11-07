@@ -16,7 +16,7 @@ const AboutInfo = forwardRef((props, ref) => {
           opacity: 1,
           x: 0,
         }}
-        transition={{ delay: 0.1, duration: 0.5 }}
+        transition={{ delay: 0.05, duration: 0.5 }}
       >
         <img src={image} alt="" className="image image--about" />
         <section className="main__context about__context">
